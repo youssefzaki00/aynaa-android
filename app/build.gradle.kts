@@ -15,8 +15,8 @@ android {
         applicationId = "com.mafazaa.ainaa"
         minSdk = 26
         targetSdk = 36
-        versionCode = 19
-        versionName = "v0.0.19"
+        versionCode = 14
+        versionName = "v0.0.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -46,8 +46,7 @@ android {
 }
 
 dependencies {
-    testImplementation(libs.junit.junit)
-    // Compose
+// Compose
     val composeBom = platform("androidx.compose:compose-bom:2024.09.02")
     implementation(composeBom)
     androidTestImplementation(composeBom)

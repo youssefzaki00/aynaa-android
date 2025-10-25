@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "versionName": "v0.0.19",
+    "versionCode": 19,
+    "manufacturer": "HONOR",
+    "model": "ALI-NX1"
+  },
+  "time": "2026-04-11 19:48:13",
+  "screenAnalysis": {
+    "appName": "عَيْنًا سَلْسَبِيلًا",
+    "hasAppName": false,
+    "isSettingsScreen": false,
+    "nodesCount": 30,
+    "pkg": "org.telegram.messenger",
+    "root": {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "cls": "android.webkit.WebView"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageView"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageView"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageView",
+                  "desc": "مزيد من الخيارات"
+                }
+              ],
+              "cls": "android.widget.FrameLayout"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "cls": "android.widget.FrameLayout"
+                }
+              ],
+              "cls": "androidx.recyclerview.widget.RecyclerView"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageView",
+                  "desc": "الرموز التعبيرية والملصقات والصور المتحركة"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.EditText",
+                  "text": "الرسالة"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageView",
+                  "desc": "إرفاق وسائط"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.FrameLayout",
+                  "desc": "تسجيل رسالة صوتية"
+                }
+              ],
+              "cls": "android.widget.FrameLayout"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageView",
+                  "desc": "العودة للخلف"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "cls": "android.view.View",
+                      "desc": "صورة الملف الشخصي"
+                    },
+                    {
+                      "children": [],
+                      "cls": "android.widget.TextView",
+                      "text": "الرسائل المحفوظة"
+                    }
+                  ],
+                  "cls": "android.widget.FrameLayout",
+                  "desc": "الرسائل المحفوظة\n"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageButton",
+                  "desc": "بحث"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageButton",
+                  "desc": "مزيد من الخيارات"
+                }
+              ],
+              "cls": "android.widget.FrameLayout"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "cls": "android.view.ViewGroup",
+                  "text": "2 أبريل"
+                },
+                {
+                  "children": [],
+                  "cls": "android.view.ViewGroup",
+                  "text": "، ملف ⁨ZIP⁩26-4-2.zip, ٢٫١ MB\nتم الإرسال ⁨في 9:12 م⁩, تم قرائتها\n"
+                },
+                {
+                  "children": [],
+                  "cls": "android.view.ViewGroup",
+                  "text": "صورة\nتم الإرسال ⁨في 11:56 م⁩, تم قرائتها\n"
+                },
+                {
+                  "children": [],
+                  "cls": "android.view.ViewGroup",
+                  "text": "3 أبريل"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "cls": "android.widget.ImageButton",
+                      "desc": "فتح المحادثة"
+                    }
+                  ],
+                  "cls": "android.view.ViewGroup",
+                  "text": "، ملف ⁨PDF⁩Intelligent Information Systems-Sheet1.pdf, ٢٠١٫٦ KB\nتم الإرسال ⁨في ⁨21 مارس⁩ الساعة ⁨3:40 م⁩⁩, تم قرائتها\n"
+                },
+                {
+                  "children": [],
+                  "cls": "android.view.ViewGroup",
+                  "text": "11 أبريل"
+                },
+                {
+                  "children": [],
+                  "cls": "android.view.ViewGroup",
+                  "text": "fandom.com\nتم الإرسال ⁨في 7:47 م⁩, تم قرائتها\n"
+                }
+              ],
+              "cls": "androidx.recyclerview.widget.RecyclerView"
+            }
+          ],
+          "cls": "android.widget.FrameLayout"
+        }
+      ],
+      "cls": "android.widget.FrameLayout"
+    }
+  }
+}

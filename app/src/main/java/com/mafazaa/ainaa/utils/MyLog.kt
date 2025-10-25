@@ -90,9 +90,10 @@ object MyLog {
      * @return The file where the log was written
      */
     fun logUiTree(codeName: String, screenAnalysis: ScreenAnalysis): File {
-        val jsonFileName = "$codeName.json"
-        val logFile = fileRepo.getLogFile(jsonFileName)
-        fileRepo.wipeLog(jsonFileName)
+        val fileName = "$codeName.txt"
+        val logFile = fileRepo.getLogFile(fileName)
+        fileRepo.wipeLog(fileName)
+
         val jsonPayload = buildString {
             append("{")
             append("\"meta\":{")
@@ -106,13 +107,12 @@ object MyLog {
                         .format(Date(System.currentTimeMillis()))
                 }\""
             )
-            append(",")
+            append("},")
             append("\"screenAnalysis\":")
             append(screenAnalysis.toJson())
             append("}")
         }
-
-        fileRepo.saveToLog(jsonPayload, jsonFileName)
+        fileRepo.saveToLog(jsonPayload, fileName)
         return logFile
     }
 
@@ -134,26 +134,6 @@ object MyLog {
                     )
                 }\n"
             )
-        }
-        fileRepo.saveToLog(info, fileName)
-        return logFile
-    }
-
-    fun logBlockedWordDetected(keyword: String, sentence: String): File {
-        val fileName = "${keyword}_blocked.txt"
-        val logFile = fileRepo.getLogFile(fileName)
-        fileRepo.wipeLog(fileName)
-        val info = buildString {
-            append("Blocked keyword: $keyword\n")
-            append("Sentence: $sentence\n")
-            append("Log file size: ${fileRepo.getLogSize()} bytes\n")
-            append(
-                "Time: ${
-                    DateFormat.format("yyyy-MM-dd HH:mm:ss", System.currentTimeMillis())
-                }\n"
-            )
-            append("Device: ${Build.MANUFACTURER} ${Build.MODEL}\n")
-            append("App: ${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})\n")
         }
         fileRepo.saveToLog(info, fileName)
         return logFile

@@ -12,16 +12,12 @@ import com.mafazaa.ainaa.utils.MyLog
  */
 class RestartReceiver: BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        try {
-            MyLog.d(TAG, "Received restart broadcast")
-            val serviceIntent = Intent(context, MyAccessibilityService::class.java).apply {
-                this.action = MyAccessibilityService.ACTION_START_FOREGROUND
-            }
-            context?.let {
-                it.startForegroundService(serviceIntent)
-            }
-        } catch (e: Exception) {
-            MyLog.e(TAG, "Error in RestartReceiver: ${e.message}", e)
+        MyLog.d(TAG, "Received restart broadcast")
+        val serviceIntent = Intent(context, MyAccessibilityService::class.java).apply {
+            this.action = MyAccessibilityService.ACTION_START
+        }
+        context.let {
+            it?.startForegroundService(serviceIntent)
         }
     }
     companion object {

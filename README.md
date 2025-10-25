@@ -17,7 +17,7 @@
 &#160;
 [![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange)]()
 
-[![Build & Upload Debug to Firebase App Distribution](https://github.com/mafazaa-org/Ainaa-android/actions/workflows/firebase-dist.yml/badge.svg?branch=feature%2Fgh-action)](https://github.com/mafazaa-org/Ainaa-android/actions/workflows/firebase-dist.yml)
+[![Firebase Test Build](https://github.com/mafazaa-org/Ainaa-android/actions/workflows/firebase-dist.yml/badge.svg?branch=test)](https://github.com/mafazaa-org/Ainaa-android/actions/workflows/firebase-dist.yml)
 
 </div>
 

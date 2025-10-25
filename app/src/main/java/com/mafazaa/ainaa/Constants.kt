@@ -1,4 +1,4 @@
-package com.mafazaa.ainaa.utils
+package com.mafazaa.ainaa
 
 import com.mafazaa.ainaa.domain.models.ScriptCode
 
@@ -8,6 +8,7 @@ object Constants {
     const val JOIN_URL = "https://www.mafazaa.com/join"
     const val SUPPORT_CONTACT_URL = "https://ainaa.mafazaa.com/support"
     const val SAFE_SEARCH_URL = "https://google.com/safesearch"
+    const val WORD_API_TOKEN= "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDkxMDg4YzRlNWEyZTBjM2JjZWQwYyIsImlhdCI6MTc3NTgzMzIyNCwiZXhwIjoxNzc4NDI1MjI0fQ.aWm9wby-PZAUHg7UQXeAav2tb3rAkFL20G707xgK7JU"
     val socialMediaPackages = listOf(
         "com.facebook.katana",        // Facebook
         "com.facebook.lite",          // Facebook Lite

@@ -36,6 +36,7 @@ import androidx.compose.ui.window.Dialog
 import com.mafazaa.ainaa.R
 import com.mafazaa.ainaa.data.models.ReportModel
 import com.mafazaa.ainaa.ui.common.LabelledTextField
+import com.mafazaa.ainaa.ui.theme.lightGray
 
 
 val nameValidRegex = Regex("[\\p{L}-\\s]{3,}")
@@ -187,7 +188,7 @@ fun ReportProblemDialog(
                 Text(
                     text = stringResource(R.string.email_phone_contact_message),
                     fontSize = 12.sp,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    color = lightGray,
                     textAlign = TextAlign.Center,
                     modifier = Modifier
                         .fillMaxWidth()
