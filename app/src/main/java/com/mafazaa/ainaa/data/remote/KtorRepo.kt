@@ -1,11 +1,11 @@
 package com.mafazaa.ainaa.data.remote
 
 import android.util.Log
+import com.mafazaa.ainaa.Constants
 import com.mafazaa.ainaa.data.models.NetworkResult
 import com.mafazaa.ainaa.data.models.ReportModel
 import com.mafazaa.ainaa.data.models.VersionModel
 import com.mafazaa.ainaa.domain.repo.RemoteRepo
-import com.mafazaa.ainaa.utils.Constants
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.android.Android
 import io.ktor.client.plugins.logging.LogLevel
@@ -29,6 +29,7 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.longOrNull
+import kotlinx.serialization.json.booleanOrNull
 import java.io.File
 
 
@@ -96,6 +97,45 @@ class KtorRepo : RemoteRepo {
             e.printStackTrace()
             false
         }
+    }
+
+    override suspend fun getAllBlockedWords(): List<String> ?{
+        val allWords = mutableListOf<String>()
+        var page = 1
+        var hasNextPage = true
+        try {
+            while (hasNextPage) {
+                Log.d("KtorRepo", "Fetching page $page")
+                val url = "https://api.aynaa.org/api/v1/keywords?page=$page&limit=100"
+                val response: HttpResponse = client.get(url) {
+                    header("accept", "application/json")
+                    header("Authorization", "Bearer ${Constants.WORD_API_TOKEN}")
+                }
+                if (response.status.isSuccess()) {
+                    val json = parseToJsonElement(response.bodyAsText()).jsonObject
+                    val data = json["data"]?.jsonObject
+                    val keywords = data?.get("keywords")?.jsonArray
+
+                    keywords?.forEach { element ->
+                        element.jsonObject["word"]?.jsonPrimitive?.content?.let { word ->
+                            allWords.add(word)
+                        }
+                    }
+
+                    val pagination = data?.get("pagination")?.jsonObject
+                    hasNextPage =
+                        pagination?.get("hasNextPage")?.jsonPrimitive?.booleanOrNull ?: false
+                    page++
+                } else {
+                    hasNextPage = false
+                }
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            return null
+
+        }
+        return allWords
     }
 
     val client = HttpClient(Android) {

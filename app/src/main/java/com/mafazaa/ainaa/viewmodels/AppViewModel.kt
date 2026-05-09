@@ -14,6 +14,7 @@ import com.mafazaa.ainaa.domain.FileRepo
 import com.mafazaa.ainaa.domain.models.AppInfo
 import com.mafazaa.ainaa.domain.models.DnsProtectionLevel
 import com.mafazaa.ainaa.domain.models.UpdateState
+import com.mafazaa.ainaa.domain.repo.ContentRepo
 import com.mafazaa.ainaa.domain.repo.RemoteRepo
 import com.mafazaa.ainaa.domain.repo.UpdateRepo
 import com.mafazaa.ainaa.helpers.ScreenshotOverlayManager
@@ -29,14 +30,15 @@ class AppViewModel(
     private val sharedPrefs: SharedPrefs,
     private val fileRepo: FileRepo,
     private val updateRepo: UpdateRepo,
-    private val screenshotOverlayManager: ScreenshotOverlayManager
+    private val screenshotOverlayManager: ScreenshotOverlayManager,
+    private val contentRepo: ContentRepo
 ) : ViewModel() {
 
     private val TAG = "MainViewModel"
     private val _apps = MutableStateFlow<List<AppInfo>>(emptyList())
     private val _blockedWords = MutableStateFlow<List<String>>(emptyList())
     val apps: StateFlow<List<AppInfo>> = _apps.asStateFlow()
-    val blockedWords: StateFlow<List<String>> = _blockedWords.asStateFlow()
+    val blockedWords: StateFlow<List<String>> = contentRepo.blockedWordsStatus
 
     var updateState = mutableStateOf<UpdateState>(UpdateState.NoUpdate)
 
@@ -52,22 +54,8 @@ class AppViewModel(
         _apps.value = appList
     }
 
-    fun loadBlockedWords() {
-        _blockedWords.value = sharedPrefs.blockedWords.toList()
-    }
 
-    fun addBlockedWord(word: String) {
-        if (word.isBlank()) return
-        if (_blockedWords.value.contains(word)) return
-        sharedPrefs.blockedWords = sharedPrefs.blockedWords.add(word)
-        _blockedWords.value += word
-    }
 
-    fun removeBlockedWord(word: String) {
-        if (!_blockedWords.value.contains(word)) return
-        sharedPrefs.blockedWords = sharedPrefs.blockedWords.remove(word)
-        _blockedWords.value -= word
-    }
 
     fun showScreenshotOverlay(show: Boolean) {
         if (show) {
@@ -121,7 +109,18 @@ class AppViewModel(
         sharedPrefs.dnsProtectionLevel = level
     }
 
+    fun loadBlockedWords() {
+        contentRepo.getBlockedWords()
+    }
 
+    fun addBlockedWord(word: String) {
+        if (word.isBlank()) return
+        contentRepo.addKeyWord(word)
+    }
+
+    fun removeBlockedWord(word: String) {
+        contentRepo.removeKeyWord(word)
+    }
 
 
 }

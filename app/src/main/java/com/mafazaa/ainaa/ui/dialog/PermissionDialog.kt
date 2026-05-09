@@ -42,7 +42,6 @@ fun PermissionDialog(
         PermissionState.Overlay -> stringResource(R.string.overlay_permission_text) to stringResource(
             R.string.overlay_permission_message
         )
-        PermissionState.Vpn -> stringResource(R.string.vpn_permission_text) to stringResource(R.string.vpn_permission_message)
         PermissionState.Accessibility -> stringResource(R.string.accessibility_permission_text) to stringResource(
             R.string.accessibility_permission_message
         )

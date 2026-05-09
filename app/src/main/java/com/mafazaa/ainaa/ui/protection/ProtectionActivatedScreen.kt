@@ -16,6 +16,10 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -29,6 +33,7 @@ import com.mafazaa.ainaa.R
 import com.mafazaa.ainaa.domain.models.UpdateState
 import com.mafazaa.ainaa.ui.common.ReportLink
 import com.mafazaa.ainaa.ui.common.TwoColorText
+import com.mafazaa.ainaa.ui.dialog.ManageKeywordsDialog
 import com.mafazaa.ainaa.ui.theme.red
 
 @Composable
@@ -36,12 +41,16 @@ fun ProtectionActivatedScreen(
     onSupportClick: () -> Unit,
     onBlockAppClick: () -> Unit,
     onReportClick: () -> Unit,
-    onBlockWordClicked: () -> Unit,
     onConfirmProtectionClick: () -> Unit,
     onUpdateClick: (updateState: UpdateState) -> Unit = { /* Default no-op */ },
+    onAddKeyword: (String) -> Unit = {},
+    onRemoveKeyword: (String) -> Unit = {},
+    keywords: Set<String> = emptySet(),
     updateState: UpdateState = UpdateState.NoUpdate,
 
     ) {
+    var showKeywordsDialog by remember { mutableStateOf(false) }
+
     Column(
         modifier = Modifier
             .padding(24.dp)
@@ -102,23 +111,31 @@ fun ProtectionActivatedScreen(
                 Text(text = stringResource(R.string.block_app_text))
             }
         }
-        if (false) {//draft
-            OutlinedButton(
-                onClick = onBlockWordClicked,
-                border = BorderStroke(1.dp, red),
-                colors = ButtonDefaults.outlinedButtonColors(contentColor = red),
-                shape = RoundedCornerShape(12.dp),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(48.dp)
-            ) {
-                Text(
-                    text = stringResource(R.string.block_word),
-                    modifier = Modifier.fillMaxWidth(),
-                    textAlign = TextAlign.Center
-                )
-            }
+
+        Button(
+            onClick = { showKeywordsDialog = true },
+            colors = ButtonDefaults.buttonColors(
+                containerColor = red,
+                contentColor = Color.White
+            ),
+            shape = RoundedCornerShape(12.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 16.dp)
+                .height(48.dp)
+        ) {
+            Text(text = "Show blocked keywords")
         }
+
+        if (showKeywordsDialog) {
+            ManageKeywordsDialog(
+                keywords = keywords,
+                onDismiss = { showKeywordsDialog = false },
+                onAddKeyword = onAddKeyword,
+                onRemoveKeyword = onRemoveKeyword
+            )
+        }
+
         ReportLink(onReportClick = onReportClick)
         Spacer(modifier = Modifier.height(16.dp))
         val (black, red) = when (updateState) {
@@ -126,22 +143,18 @@ fun ProtectionActivatedScreen(
                 stringResource(R.string.no_update_found_text),
                 stringResource(R.string.click_to_check_text)
             )
-
             UpdateState.Checking -> Pair(
                 stringResource(R.string.check_update_text),
                 stringResource(R.string.empty_string)
             )
-
             is UpdateState.Downloading -> Pair(
                 stringResource(R.string.downloading_update_text),
                 stringResource(R.string.empty_string)
             )
-
             is UpdateState.Failed -> Pair(
                 stringResource(R.string.update_failed_text),
                 stringResource(R.string.try_again)
             )
-
             UpdateState.Downloaded -> Pair(
                 stringResource(R.string.update_done),
                 stringResource(R.string.confirmation_text)
@@ -152,4 +165,3 @@ fun ProtectionActivatedScreen(
 
     }
 }
-

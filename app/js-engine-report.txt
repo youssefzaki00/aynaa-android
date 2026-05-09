@@ -1,0 +1,34 @@
+
+=== realme ===
+
+blocked accessability.json of realme by app info screen xiaomi true
+blocked app info screen xiaomi.json of realme by app info screen xiaomi true
+blocked app info screen xiaomi2.json of realme by app info screen xiaomi true
+blocked app info.json of realme by app info screen xiaomi true
+blocked device admin samsung.json of realme by device admin realme true
+blocked device admin samsung2.json of realme by device admin realme true
+blocked device admin.json of realme by device admin realme true
+blocked safezone.json of realme by safe zone screen realme true
+blocked uninstall screen.json of realme by uninstall screen realme true
+blocked uninstall.json of realme by uninstall screen realme true
+
+=== samsung ===
+
+blocked accessability2.json of samsung by settings app info screen samsung true
+blocked app info screen xiaomi.json of samsung by app info screen xiaomi true
+blocked background apps dialog xiaomi.json of samsung by background apps dialog xiaomi true
+blocked device admin 2.json of samsung by device admin realme true
+blocked device admin.json of samsung by background apps dialog xiaomi true
+blocked not blocking - accessibility.json of samsung by settings app info screen samsung true
+blocked not blocking - uninstall popup.json of samsung by uninstall popup samsung true
+blocked overlay - app info screen xiaomi.json of samsung by app info screen xiaomi true
+
+=== xiaomi ===
+
+blocked accessibility-overlay screen xiaomi.json of xiaomi by Overlay screen xiaomi true
+blocked app info screen xiaomi.json of xiaomi by app info screen xiaomi true
+blocked background apps dialog xiaomi.json of xiaomi by background apps dialog xiaomi true
+blocked device admin.json of xiaomi by device admin xiaomi true
+blocked not blocking - uninstall popup.json of xiaomi by uninstall popup samsung true
+blocked overlay permission2 - app info screen xiaomi.json of xiaomi by app info screen xiaomi true
+blocked vpn - app info screen xiaomi.json of xiaomi by app info screen xiaomi true

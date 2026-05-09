@@ -8,14 +8,8 @@ import com.mafazaa.ainaa.service.MyAccessibilityService
 import com.mafazaa.ainaa.service.MyAccessibilityService.Companion.startAccessibilityService
 import com.mafazaa.ainaa.utils.MyLog
 import com.mafazaa.ainaa.utils.hasAccessibilityPermission
-import com.mafazaa.ainaa.utils.hasVpnPermission
 import com.mafazaa.ainaa.utils.isKeyguardSecure
-import com.mafazaa.ainaa.utils.startVpnService
 
-/**
- * Receiver to handle device boot completion and start necessary services accordingly.
- * It checks for accessibility and VPN permissions before starting the respective services.
- */
 class BootReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
@@ -37,10 +31,6 @@ class BootReceiver : BroadcastReceiver() {
         }
         if (context.hasAccessibilityPermission()) {
             context.startAccessibilityService()
-        }
-        if (context.hasVpnPermission()) {
-            MyLog.i(TAG, "Starting vpn on boot")
-            context.startVpnService()
         }
 
     }

@@ -42,6 +42,10 @@ import androidx.navigation3.runtime.NavEntry
 import androidx.navigation3.runtime.rememberSavedStateNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import androidx.navigation3.ui.rememberSceneSetupNavEntryDecorator
+import com.mafazaa.ainaa.Constants.JOIN_URL
+import com.mafazaa.ainaa.Constants.SAFE_SEARCH_URL
+import com.mafazaa.ainaa.Constants.SUPPORT_CONTACT_URL
+import com.mafazaa.ainaa.Constants.SUPPORT_URL
 import com.mafazaa.ainaa.DialogState.BlockApps
 import com.mafazaa.ainaa.data.local.SharedPrefs
 import com.mafazaa.ainaa.data.models.NetworkResult
@@ -49,12 +53,12 @@ import com.mafazaa.ainaa.domain.models.AppInfo
 import com.mafazaa.ainaa.domain.models.DnsProtectionLevel
 import com.mafazaa.ainaa.domain.models.PermissionState
 import com.mafazaa.ainaa.domain.models.UpdateState
+import com.mafazaa.ainaa.domain.repo.ContentRepo
 import com.mafazaa.ainaa.helpers.LocaleHelper
 import com.mafazaa.ainaa.navigation.Screen
 import com.mafazaa.ainaa.receiver.AppDeviceAdminReceiver
 import com.mafazaa.ainaa.service.MyAccessibilityService
 import com.mafazaa.ainaa.service.MyAccessibilityService.Companion.startAccessibilityService
-import com.mafazaa.ainaa.service.MyVpnService
 import com.mafazaa.ainaa.ui.common.BottomBar
 import com.mafazaa.ainaa.ui.common.OkDialog
 import com.mafazaa.ainaa.ui.common.TopBar
@@ -69,26 +73,19 @@ import com.mafazaa.ainaa.ui.protection.EnableProtectionScreen
 import com.mafazaa.ainaa.ui.protection.ProtectionActivatedScreen
 import com.mafazaa.ainaa.ui.support.SupportScreen
 import com.mafazaa.ainaa.ui.theme.AinaaTheme
-import com.mafazaa.ainaa.utils.Constants.JOIN_URL
-import com.mafazaa.ainaa.utils.Constants.SAFE_SEARCH_URL
-import com.mafazaa.ainaa.utils.Constants.SUPPORT_CONTACT_URL
-import com.mafazaa.ainaa.utils.Constants.SUPPORT_URL
 import com.mafazaa.ainaa.utils.MyLog
 import com.mafazaa.ainaa.utils.getAllApps
 import com.mafazaa.ainaa.utils.hasAccessibilityPermission
 import com.mafazaa.ainaa.utils.hasNotificationPermission
 import com.mafazaa.ainaa.utils.hasOverlayPermission
 import com.mafazaa.ainaa.utils.hasUsageStatsPermission
-import com.mafazaa.ainaa.utils.hasVpnPermission
 import com.mafazaa.ainaa.utils.installApk
 import com.mafazaa.ainaa.utils.isServiceRunning
 import com.mafazaa.ainaa.utils.openUrl
 import com.mafazaa.ainaa.utils.requestAccessibilityPermission
 import com.mafazaa.ainaa.utils.requestAdminPermission
 import com.mafazaa.ainaa.utils.requestDrawOverlaysPermission
-import com.mafazaa.ainaa.utils.requestVpnPermission
 import com.mafazaa.ainaa.utils.shareFile
-import com.mafazaa.ainaa.utils.startVpnService
 import com.mafazaa.ainaa.viewmodels.AppViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -119,7 +116,6 @@ class AppActivity : ComponentActivity() {
             else Screen.ProtectionActivated
         )
     }
-    private var vpnPermission by mutableStateOf(false)
     private var overlayPermission by mutableStateOf(false)
     private var usageStatsPermission by mutableStateOf(false)
     private var accessibilityPermission by mutableStateOf(false)
@@ -181,7 +177,6 @@ class AppActivity : ComponentActivity() {
     ) {
         val snackbarHostState = remember { SnackbarHostState() }
         val apps = viewModel.apps.collectAsState().value
-        val blockedWords = viewModel.blockedWords.collectAsState().value
 
         // Centralized dialogs rendering
         when (val d = dialogState) {
@@ -280,7 +275,6 @@ class AppActivity : ComponentActivity() {
                                 Toast.LENGTH_LONG
                             ).show()
                             startAccessibilityService(MyAccessibilityService.ACTION_START_FOREGROUND)
-                            startVpnService(MyVpnService.ACTION_START)
                             backStack.add(Screen.ProtectionActivated)
                             backStack.remove(Screen.EnableProtection)
                         } else {
@@ -293,11 +287,10 @@ class AppActivity : ComponentActivity() {
 
             DialogState.BlockWords -> {
                 ManageKeywordsDialog(
-                    keywords = blockedWords.toSet(),
+                    keywords = viewModel.blockedWords.collectAsState().value.toSet(),
                     onDismiss = { dialogState = null },
                     onAddKeyword = { viewModel.addBlockedWord(it) },
-                    onRemoveKeyword = {})
-
+                    onRemoveKeyword = { viewModel.removeBlockedWord(it) })
             }
 
             null -> {}
@@ -314,17 +307,8 @@ class AppActivity : ComponentActivity() {
                     currentScreen = currentScreen,
                     supportUs = { backStack.add(Screen.Support) },
                     home = {
-                        if (isServiceRunning(context, MyVpnService::class.java)) {
-                            // If already on the screen, don't add it again
-                            if (backStack.lastOrNull() != Screen.ProtectionActivated) {
-                                backStack.add(Screen.ProtectionActivated)
-                            }
-                        } else {
-                            // If service is not running, navigate to the enable screen
-                            if (backStack.lastOrNull() != Screen.EnableProtection) {
-                                backStack.clear() // Or handle navigation as you see fit
-                                backStack.add(Screen.EnableProtection)
-                            }
+                        if (backStack.lastOrNull() != Screen.ProtectionActivated) {
+                            backStack.add(Screen.ProtectionActivated)
                         }
                     }
                 )
@@ -346,6 +330,7 @@ class AppActivity : ComponentActivity() {
                 .background(MaterialTheme.colorScheme.surface)
                 .windowInsetsPadding(WindowInsets.systemBars)
         ) { innerPadding ->
+            val contentRepo : ContentRepo by inject(ContentRepo::class.java)
             NavDisplay(
                 modifier = Modifier.padding(innerPadding),
                 backStack = backStack,
@@ -362,7 +347,9 @@ class AppActivity : ComponentActivity() {
                                 onBlockAppClick = { dialogState = DialogState.BlockApps() },
                                 onReportClick = { dialogState = DialogState.ReportProblem },
                                 onConfirmProtectionClick = { dialogState = DialogState.HowItWorks },
-                                onBlockWordClicked = { dialogState = DialogState.BlockWords },
+                                onAddKeyword = { viewModel.addBlockedWord(it) },
+                                onRemoveKeyword = { viewModel.removeBlockedWord(it) },
+                                keywords = viewModel.blockedWords.collectAsState().value.toSet(),
                                 onUpdateClick = { updateStatus ->
                                     when (updateStatus) {
                                         UpdateState.Downloaded -> {
@@ -385,22 +372,20 @@ class AppActivity : ComponentActivity() {
                         }
 
                         Screen.Support -> NavEntry(key) {
-                            var isBlocking by remember {
-                                mutableStateOf(MyAccessibilityService.isRunning)
-                            }
+                            val isRunning = MyAccessibilityService.isRunning.collectAsState().value
                             SupportScreen(
                                 onSupportClick = { openUrl(SUPPORT_URL) },
                                 onJoinClick = { openUrl(JOIN_URL) },
                                 onShareLogFile = { this@AppActivity.shareFile(viewModel.getLogFile()) },
                                 onStopBlocking = {
-                                    MyAccessibilityService.isRunning =
-                                        !MyAccessibilityService.isRunning
+                                    MyAccessibilityService.isRunning.value =
+                                        !MyAccessibilityService.isRunning.value
                                 },
                                 onOpenScreenShotWindow = {
                                     viewModel.showScreenshotOverlay(true)
 
                                 },
-                                isBlocking = isBlocking
+                                isBlocking = isRunning
                             )
                         }
 
@@ -412,8 +397,6 @@ class AppActivity : ComponentActivity() {
                                 enableProtection = { level: DnsProtectionLevel ->
                                     selectedLevel = level
                                     when {
-                                        !vpnPermission -> dialogState =
-                                            DialogState.Permission(PermissionState.Vpn)
 
                                         !notificationPermission -> dialogState =
                                             DialogState.Permission(PermissionState.Notification)
@@ -442,9 +425,6 @@ class AppActivity : ComponentActivity() {
         if (!notificationPermission) {
             notificationPermission = hasNotificationPermission()
         }
-        if (!vpnPermission) {
-            vpnPermission = hasVpnPermission()
-        }
         if (!overlayPermission) {
             overlayPermission = hasOverlayPermission()
         }
@@ -456,7 +436,6 @@ class AppActivity : ComponentActivity() {
         }
         permissionState = when {
             !notificationPermission -> PermissionState.Notification
-            !vpnPermission -> PermissionState.Vpn
             !overlayPermission -> PermissionState.Overlay
             !accessibilityPermission -> PermissionState.Accessibility
             else -> null
@@ -487,7 +466,6 @@ class AppActivity : ComponentActivity() {
                 }
             }
 
-            PermissionState.Vpn -> requestVpnPermission()
             PermissionState.Overlay -> requestDrawOverlaysPermission()
             PermissionState.Accessibility -> requestAccessibilityPermission()
             PermissionState.Administrative -> requestAdminPermission(adminReceiver, requestAdmin)

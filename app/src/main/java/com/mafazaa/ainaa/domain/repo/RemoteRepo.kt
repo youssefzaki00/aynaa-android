@@ -14,5 +14,7 @@ interface RemoteRepo {
         file: File,
     ): Boolean
 
+    suspend fun getAllBlockedWords(): List<String>?
+
 
 }

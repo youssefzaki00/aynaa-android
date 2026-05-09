@@ -167,34 +167,3 @@ fun AppBlockItem(
     }
 }
 
-@Preview(showBackground = true, fontScale = 1.5f)
-@Composable
-fun PreviewBlockAppDialog() {
-    val sampleApps = listOf(
-        AppInfo(
-            stringResource(
-                R.string.whatsapp_text
-            ),
-            null,
-            stringResource(R.string.whatsapp_package_text),
-            false
-        ),
-        AppInfo(
-            stringResource(R.string.facebook_text),
-            null,
-            stringResource(R.string.facebook_package_text),
-            true
-        ),
-        AppInfo(
-            stringResource(R.string.instagram_text),
-            null,
-            stringResource(R.string.instagram_package_text),
-            false
-        )
-    )
-    BlockAppDialog(
-        onDismiss = {},
-        appStates = sampleApps,
-        onBlockClick = {}
-    )
-}

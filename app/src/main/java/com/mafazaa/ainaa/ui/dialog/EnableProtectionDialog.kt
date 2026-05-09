@@ -35,6 +35,7 @@ import com.mafazaa.ainaa.ui.theme.AinaaTheme
 import com.mafazaa.ainaa.ui.theme.red
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.ui.platform.LocalConfiguration
 
 /**

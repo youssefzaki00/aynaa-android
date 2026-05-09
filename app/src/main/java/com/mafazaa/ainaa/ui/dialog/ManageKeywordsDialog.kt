@@ -6,6 +6,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -173,11 +174,16 @@ fun KeywordItem(
                     .padding(start = 12.dp, top = 16.dp, bottom = 16.dp, end = 8.dp)
                     .weight(1f)
             )
-
+            IconButton(onClick = onRemove) {
+                Icon(
+                    imageVector = Icons.Default.Delete,
+                    contentDescription = stringResource(R.string.delete_keyword_text),
+                    tint = red
+                )
+            }
         }
     }
 }
-
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun ManageKeywordsDialogPreview() {

@@ -9,18 +9,19 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import android.view.accessibility.AccessibilityEvent
+import com.mafazaa.ainaa.Constants.browserPackages
+import com.mafazaa.ainaa.Constants.socialMediaPackages
 import com.mafazaa.ainaa.R
 import com.mafazaa.ainaa.data.local.SharedPrefs
 import com.mafazaa.ainaa.domain.models.BlockReason
 import com.mafazaa.ainaa.domain.models.ScreenAnalysis
 import com.mafazaa.ainaa.domain.models.ScreenNode
 import com.mafazaa.ainaa.domain.models.ScriptResult
+import com.mafazaa.ainaa.domain.repo.ContentRepo
 import com.mafazaa.ainaa.domain.repo.ScriptRepo
 import com.mafazaa.ainaa.helpers.DeviceUtils
 import com.mafazaa.ainaa.helpers.LockOverlayManager
 import com.mafazaa.ainaa.helpers.ScreenAnalyser
-import com.mafazaa.ainaa.utils.Constants.browserPackages
-import com.mafazaa.ainaa.utils.Constants.socialMediaPackages
 import com.mafazaa.ainaa.utils.MyLog
 import com.mafazaa.ainaa.utils.MyLog.logUiTree
 import com.mafazaa.ainaa.utils.createNotification
@@ -30,6 +31,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.koin.java.KoinJavaComponent.inject
@@ -43,81 +47,71 @@ class MyAccessibilityService : AccessibilityService() {
     internal var watchdogPendingIntent: PendingIntent? = null
     internal val sharedPrefs: SharedPrefs by inject(SharedPrefs::class.java)
     private val scriptRepo: ScriptRepo by inject(ScriptRepo::class.java)
+    private val contentRepo: ContentRepo by inject(ContentRepo::class.java)
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         when (intent?.action) {
             ACTION_START_FOREGROUND -> {
-
                 startForeground(
                     NOTIFICATION_ID,
                     createNotification()
                 )
                 MyLog.i(TAG, "Accessibility Service started in foreground.")
-                isRunning = true
+                startAccessibilityService()
             }
-
-            ACTION_START_FOREGROUND -> {
-
+            ACTION_START -> {
                 MyLog.i(TAG, "Accessibility Service started and moved to foreground.")
             }
-
             ACTION_STOP -> {
-                isRunning = false
                 stopForeground(STOP_FOREGROUND_REMOVE)
                 stopSelf()
 
             }
-
             ACTION_SHARE_CURRENT_SCREEN -> {
-                if (!isRunning) {
-                    MyLog.w(TAG, "Service not running, cannot share screen")
-                }
                 serviceScope.launch {
-                    rootInActiveWindow?.let {
-                        val screenAnalysis = ScreenAnalyser.analyzeScreen(
-                            it, getString(R.string.app_name)
-                        )
-                        shareFile(logUiTree("screenShot", screenAnalysis))
-                    }
+                    val screenAnalysis = ScreenAnalyser.analyzeScreen(
+                        rootInActiveWindow, getString(R.string.app_name)
+                    )
+                    shareFile(logUiTree("screenShot", screenAnalysis))
                 }
             }
-
             else -> {
-                isRunning = true
                 MyLog.w(TAG, "Unknown action received: ${intent?.action}")
             }
         }
         return START_STICKY
     }
-
     companion object {
         fun Context.startAccessibilityService(action: String = ACTION_START_FOREGROUND) {
             val intent = Intent(this, MyAccessibilityService::class.java).apply {
-                this@apply.action = action
+                this@apply.action = if (action == ACTION_START_FOREGROUND) {
+                    ACTION_START_FOREGROUND
+                } else {
+                    ACTION_START
+                }
             }
             startService(intent)
         }
 
+        val isRunning = MutableStateFlow(false)
         const val ACTION_STOP = "STOP_ACCESSIBILITY"
-        var isRunning = false
+        const val ACTION_START = "START_ACCESSIBILITY"
 
         const val ACTION_START_FOREGROUND = "START_ACCESSIBILITY_FOREGROUND"
         const val ACTION_SHARE_CURRENT_SCREEN = "SHARE_CURRENT_SCREEN"
         internal const val NOTIFICATION_ID = 101 // Unique ID for the notification
         internal const val NOTIFICATION_CHANNEL_ID = "AINAA_PROTECTION_CHANNEL"
-        internal const val WATCHDOG_INTERVAL_MS = 15 * 60 * 1000L
+        internal const val WATCHDOG_INTERVAL_MS =  15 *60 * 1000L
 
         const val TAG = "MyAccessibilityService"
 
         private val SETTINGS_PACKAGE = DeviceUtils.settingsPackageName
-        private val ACCESSIBILITY_SETTINGS =
-            "${SETTINGS_PACKAGE}.accessibility.AccessibilitySettings"
+        private val ACCESSIBILITY_SETTINGS = "${SETTINGS_PACKAGE}.accessibility.AccessibilitySettings"
     }
 
     override fun onCreate() {
         super.onCreate()
         MyLog.i(TAG, "Accessibility Service created.")
-        //scheduleWatchdog()
     }
 
     override fun onServiceConnected() {
@@ -133,17 +127,24 @@ class MyAccessibilityService : AccessibilityService() {
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {
         // Return early if event is null or service is not running
         event ?: return
-        if (!isRunning) return
+        if (!isRunning.value) return
+        // Only handle window content changed events
         if (event.eventType != AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED &&
-            event.eventType != AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED
-        ) {
+            event.eventType != AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED) {
             return
         }
-        rootInActiveWindow?.let { rootNode ->
-            if (rootNode.packageName == "com.mafazaa.ainaa") {
+        if (event.eventType == AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED) {
+            val componentName = event.className?.toString()
+            if (event.packageName == SETTINGS_PACKAGE &&
+                (componentName == ACCESSIBILITY_SETTINGS ||
+                        componentName?.contains("accessibility", true) == true)) {
+
+                block(BlockReason.UsingBlockedApp(SETTINGS_PACKAGE))
                 return
             }
+        }
 
+        rootInActiveWindow?.let { rootNode ->
             serviceScope.launch {
                 // Analyze the current screen and measure the time taken
                 val (analysisResult, analysisDuration) = measureTimedValue {
@@ -159,7 +160,7 @@ class MyAccessibilityService : AccessibilityService() {
                     block(BlockReason.UsingBlockedApp(currentPackage ?: "unknown"))
                     return@launch
                 }
-                if ((socialMediaPackages + browserPackages).contains(analysisResult.pkg)) {
+                if (analysisResult.pkg!=packageName) {
                     checkBlockedWords(analysisResult)?.let { blockedWord ->
                         MyLog.i(TAG, "Blocked word detected: $blockedWord")
                         block(blockedWord)
@@ -217,11 +218,12 @@ class MyAccessibilityService : AccessibilityService() {
         val maxNodes = 500
         if (!this.isKeyguardSecure())//this means the phone is locked and the local data is encrypted
             return null
-        if (sharedPrefs.blockedWords.isEmpty()) {
+        val blockedWordsList = contentRepo.blockedWordsStatus.first()
+        if (blockedWordsList.isEmpty()) {
             return null
         }
         return withContext(Dispatchers.Default) {
-            for (word in sharedPrefs.blockedWords) {
+            for (word in blockedWordsList) {
                 var stack = emptyList<ScreenNode>().toMutableList()
                 stack.add(screenAnalysis.root)
                 var nodesChecked = 0
@@ -260,7 +262,6 @@ class MyAccessibilityService : AccessibilityService() {
     }
 
     override fun onTaskRemoved(rootIntent: Intent?) {
-        MyLog.w(TAG, "Task removed, scheduling restart")
         MyLog.d(TAG, "Restart broadcast sent")
         super.onTaskRemoved(rootIntent)
     }

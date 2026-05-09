@@ -14,7 +14,6 @@ import android.content.Context.NOTIFICATION_SERVICE
 import android.content.Intent
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
-import android.net.VpnService.prepare
 import android.os.Build
 import android.os.Process
 import android.provider.Settings
@@ -30,7 +29,6 @@ import com.mafazaa.ainaa.R
 import com.mafazaa.ainaa.domain.models.AppInfo
 import com.mafazaa.ainaa.service.MyAccessibilityService
 import com.mafazaa.ainaa.service.MyAccessibilityService.Companion.NOTIFICATION_CHANNEL_ID
-import com.mafazaa.ainaa.service.MyVpnService
 import java.io.File
 
 /*
@@ -71,18 +69,7 @@ fun isServiceRunning(context: Context, serviceClass: Class<*>): Boolean {
     return false
 }
 
-fun Context.startVpnService( action: String = MyVpnService.ACTION_START) {
-    val intent = Intent(this, MyVpnService::class.java).apply {
-        this.action = if (
-            action == MyVpnService.ACTION_START
-        ) {
-            MyVpnService.ACTION_START
-        } else {
-            MyVpnService.ACTION_START
-        }
-    }
-    startService(intent)
-}
+
 
 fun Context.openUrl(url: String) {
     val intent = Intent(Intent.ACTION_VIEW, url.toUri())
@@ -115,7 +102,6 @@ fun Context.hasNotificationPermission(): Boolean {
             ) == PackageManager.PERMISSION_GRANTED
 }
 
-fun Context.hasVpnPermission(): Boolean = prepare(this) == null
 
 fun Context.isKeyguardSecure(): Boolean {
     val keyguardManager = getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
@@ -127,12 +113,6 @@ fun ComponentActivity.requestDrawOverlaysPermission() {
     startActivity(intent)
 }
 
-fun ComponentActivity.requestVpnPermission() {
-    val intent = prepare(this)
-    if (intent != null) {
-        startActivityForResult(intent, 0)
-    }
-}
 
 fun ComponentActivity.requestUsageStatsPermission() {
     val intent = Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS)
