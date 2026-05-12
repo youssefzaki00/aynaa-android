@@ -16,6 +16,17 @@ data class ScreenNode(
     override fun toString(): String {//consider this as root
         return toString(0)
     }
+    fun hasTextOrDescContaining(keyword: String): Boolean {
+        if (text?.contains(keyword, true) == true || desc?.contains(keyword, true) == true) {
+            return true
+        }
+        for (child in children) {
+            if (child.hasTextOrDescContaining(keyword)) {
+                return true
+            }
+        }
+        return false
+    }
 
     fun toString(level: Int): String {
         val indent = "  ".repeat(level)

@@ -3,6 +3,15 @@
   <component name="CopilotDiffPersistence">
     <option name="pendingDiffs">
       <map>
+        <entry key="/ContentRepo (snapshot).kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/ContentRepo (snapshot).kt" />
+              <option name="originalContent" value="package com.mafazaa.ainaa.domain.repo&#10;&#10;import com.mafazaa.ainaa.data.local.SharedPrefs&#10;import kotlinx.coroutines.GlobalScope&#10;import kotlinx.coroutines.launch&#10;import kotlinx.coroutines.flow.Flow&#10;&#10;interface ContentRepo {&#10;    val blockedWordsStatus: Flow&lt;List&lt;String&gt;&gt;&#10;    fun getBlockedWords()&#10;    fun removeKeyWord(word: String)&#10;    fun addKeyWord(word: String)&#10;}&#10;" />
+              <option name="updatedContent" value="package com.mafazaa.ainaa.domain.repo&#10;&#10;import com.mafazaa.ainaa.data.local.SharedPrefs&#10;import kotlinx.coroutines.GlobalScope&#10;import kotlinx.coroutines.launch&#10;import kotlinx.coroutines.flow.Flow&#10;import kotlinx.coroutines.flow.StateFlow&#10;&#10;interface ContentRepo {&#10;    val blockedWordsStatus: StateFlow&lt;List&lt;String&gt;&gt;&#10;    fun getBlockedWords()&#10;    fun removeKeyWord(word: String)&#10;    fun addKeyWord(word: String)&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
         <entry key="/MyAccessibilityService (snapshot).kt">
           <value>
             <PendingDiffInfo>

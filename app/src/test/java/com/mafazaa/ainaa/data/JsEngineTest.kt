@@ -3,15 +3,14 @@ package com.mafazaa.ainaa.data
 import com.google.gson.Gson
 import com.mafazaa.ainaa.domain.models.ScreenAnalysis
 import com.mafazaa.ainaa.domain.models.ScriptResult
-import com.mafazaa.ainaa.utils.Constants
 import org.junit.Test
 import java.io.File
 import java.io.FileOutputStream
 
 class JsEngineTest {
-    val engine = JsEngine().apply {
+    val engine = LuaScriptRepo().apply {
         setCodes(
-            Constants.defaultCodes
+            LuaScriptRepo.defaultScripts
         )
     }
     val gson = Gson()

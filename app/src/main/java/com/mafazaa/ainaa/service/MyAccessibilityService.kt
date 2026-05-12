@@ -12,6 +12,7 @@ import android.view.accessibility.AccessibilityEvent
 import com.mafazaa.ainaa.Constants.browserPackages
 import com.mafazaa.ainaa.Constants.socialMediaPackages
 import com.mafazaa.ainaa.R
+import com.mafazaa.ainaa.data.BuiltInChecker
 import com.mafazaa.ainaa.data.local.SharedPrefs
 import com.mafazaa.ainaa.domain.models.BlockReason
 import com.mafazaa.ainaa.domain.models.ScreenAnalysis
@@ -37,6 +38,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.koin.java.KoinJavaComponent.inject
+import kotlin.system.measureTimeMillis
 import kotlin.time.measureTimedValue
 
 @SuppressLint("AccessibilityPolicy")
@@ -155,6 +157,13 @@ class MyAccessibilityService : AccessibilityService() {
                     "Screen analyzed in ${analysisDuration.inWholeMilliseconds}ms, nodes=${analysisResult.nodesCount}"
                 )
                 val currentPackage = analysisResult.pkg
+                val t = measureTimeMillis {
+                    BuiltInChecker.checkers.firstOrNull { it.check(analysisResult) }?.let {
+                        block(BlockReason.TryingToDisable(it.name, analysisResult))
+                        return@launch
+                    }
+                }
+                Log.d(TAG, "Built-in checkers evaluated in ${t}ms")
                 if (checkBlockedApp(currentPackage)) {
                     MyLog.i(TAG, "Blocked app in use: $currentPackage")
                     block(BlockReason.UsingBlockedApp(currentPackage ?: "unknown"))
@@ -268,6 +277,7 @@ class MyAccessibilityService : AccessibilityService() {
 
     override fun onDestroy() {
         super.onDestroy()
+        MyLog.i(TAG, "Accessibility Service destroyed.")
         serviceScope.cancel()
 
     }

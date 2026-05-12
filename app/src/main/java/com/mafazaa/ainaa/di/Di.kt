@@ -11,6 +11,7 @@ import com.mafazaa.ainaa.data.local.SharedPrefs
 import com.mafazaa.ainaa.data.remote.FakeRemoteRepo
 import com.mafazaa.ainaa.data.remote.KtorRepo
 import com.mafazaa.ainaa.data.ContentRepoImpl
+import com.mafazaa.ainaa.data.LuaScriptRepo
 import com.mafazaa.ainaa.data.data_source.LocalContentImpl
 import com.mafazaa.ainaa.data.data_source.LocalContentRepo
 import com.mafazaa.ainaa.domain.FileRepo
@@ -33,10 +34,8 @@ val appModule = module {
     single<ScreenshotOverlayManager> { ScreenshotOverlayManager(androidContext()) }
     single<LocalContentRepo>{ LocalContentImpl( androidContext().getSharedPreferences("localContent", MODE_PRIVATE)) }
     single<ScriptRepo> {
-        JsEngine().apply {
-            setCodes(
-                Constants.defaultCodes
-            )
+        LuaScriptRepo().apply {
+            setCodes(LuaScriptRepo.defaultScripts)
         }
     }
     single<UpdateRepo> { UpdateManager(get(), get(), get()) }

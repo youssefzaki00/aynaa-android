@@ -46,6 +46,9 @@ android {
 }
 
 dependencies {
+    //lua
+    implementation(libs.luaj.luaj.jse)
+
     testImplementation(libs.junit.junit)
     // Compose
     val composeBom = platform("androidx.compose:compose-bom:2024.09.02")
@@ -62,7 +65,7 @@ dependencies {
     implementation(libs.coil.compose)
 
 // Material
-    implementation(libs.material.v160)
+    implementation(libs.material)
 
 // Navigation
     implementation(libs.nav3.runtime)

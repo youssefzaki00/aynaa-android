@@ -137,10 +137,10 @@ class AppActivity : ComponentActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setLayoutDirection(window.decorView, ViewCompat.LAYOUT_DIRECTION_RTL)
         val splashscreen = installSplashScreen()
         var keepSplashScreen = true
         super.onCreate(savedInstanceState)
+        setLayoutDirection(window.decorView, ViewCompat.LAYOUT_DIRECTION_RTL)
         splashscreen.setKeepOnScreenCondition { keepSplashScreen }
         lifecycleScope.launch {
             delay(3000)
