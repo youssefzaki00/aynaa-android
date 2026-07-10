@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "versionName": "v2.1.1",
+    "versionCode": 22,
+    "manufacturer": "Xiaomi",
+    "model": "Redmi Note 8"
+  },
+  "time": "2026-05-19 08:16:50",
+  "screenAnalysis": {
+    "appName": "عَيْنًا سَلْسَبِيلًا",
+    "hasAppName": false,
+    "isSettingsScreen": false,
+    "nodesCount": 13,
+    "pkg": "com.android.systemui",
+    "root": {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "cls": "android.view.View",
+              "id": "com.android.systemui:id/keyguard_long_press"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "cls": "android.widget.Button",
+                      "id": "com.android.systemui:id/veto"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "cls": "android.widget.TextView",
+                          "id": "android:id/app_name_text",
+                          "text": "WhatsApp"
+                        }
+                      ],
+                      "cls": "android.view.ViewGroup",
+                      "id": "android:id/notification_top_line"
+                    }
+                  ],
+                  "cls": "android.widget.FrameLayout",
+                  "id": "com.android.systemui:id/expandableNotificationRow"
+                }
+              ],
+              "cls": "android.widget.ScrollView",
+              "id": "com.android.systemui:id/notification_stack_scroller"
+            }
+          ],
+          "cls": "android.widget.FrameLayout",
+          "id": "com.android.systemui:id/notification_panel"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "cls": "android.widget.ImageView",
+              "desc": "Flashlight",
+              "id": "com.android.systemui:id/start_button"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageView",
+                  "desc": "Device locked",
+                  "id": "com.android.systemui:id/device_entry_icon_fg"
+                }
+              ],
+              "cls": "android.widget.FrameLayout",
+              "id": "com.android.systemui:id/device_entry_icon_view"
+            },
+            {
+              "children": [],
+              "cls": "android.widget.ImageView",
+              "desc": "Camera",
+              "id": "com.android.systemui:id/end_button"
+            }
+          ],
+          "cls": "android.view.ViewGroup",
+          "id": "com.android.systemui:id/keyguard_root_view"
+        }
+      ],
+      "cls": "android.widget.FrameLayout",
+      "id": "com.android.systemui:id/legacy_window_root"
+    }
+  }
+}

@@ -22,7 +22,8 @@
 -dontwarn java.beans.IntrospectionException
 -dontwarn java.beans.Introspector
 -dontwarn java.beans.PropertyDescriptor
--dontwarn javax.lang.model.SourceVersion
+-dontwarn javax.lang.model.**
+-dontwarn javax.script.**
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile

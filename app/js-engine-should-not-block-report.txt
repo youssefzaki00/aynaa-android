@@ -1,3 +1,0 @@
-=== pass files ===
-File: ..\uninstall-utils\pass\overall accessibility.json
-script=app info screen xiaomi matched=true

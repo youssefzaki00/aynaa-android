@@ -24,7 +24,7 @@ import com.mafazaa.ainaa.ui.theme.red
 @Composable
 fun TopBar(
     supportUs: () -> Unit,
-    home: () -> Unit,
+    onLogoClicked: () -> Unit,
     currentScreen: Screen? = null,
     onBack: (() -> Unit)? = null
 ) {
@@ -47,7 +47,7 @@ fun TopBar(
             modifier = Modifier
                 .fillMaxWidth(.24f)
                 .align(Alignment.Center)
-                .clickable { home() }
+                .clickable { onLogoClicked() }
         )
         Text(
             text = if (currentScreen == Screen.Support)
@@ -71,6 +71,6 @@ fun TopBar(
 @Preview
 @Composable
 fun TopBarPreview() {
-    TopBar(supportUs = {}, home = {})
+    TopBar(supportUs = {}, onLogoClicked = {})
 }
 

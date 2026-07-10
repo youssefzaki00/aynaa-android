@@ -4,13 +4,12 @@ import com.mafazaa.ainaa.domain.models.ScreenAnalysis
 import com.mafazaa.ainaa.domain.models.ScreenNode
 import com.mafazaa.ainaa.domain.models.ScriptCode
 import com.mafazaa.ainaa.domain.models.ScriptResult
-import com.mafazaa.ainaa.domain.repo.ScriptRepo
-import org.luaj.vm2.Globals
+import com.mafazaa.ainaa.domain.repo.AntiDisableRepo
 import org.luaj.vm2.LuaTable
 import org.luaj.vm2.LuaValue
 import org.luaj.vm2.lib.jse.JsePlatform
 
-class LuaScriptRepo : ScriptRepo {
+class LuaRepo : AntiDisableRepo {
     private var scripts: List<ScriptCode> = emptyList()
 
     override fun setCodes(codes: List<ScriptCode>) {

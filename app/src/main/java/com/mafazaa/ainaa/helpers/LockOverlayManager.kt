@@ -67,10 +67,13 @@ class LockOverlayManager(val context: Context) {
 
                             is BlockReason.BlockedWordDetected -> {
                                 context.shareFile(
-                                    MyLog.logBlockedWordDetected(
-                                        reason.keyword,
-                                        reason.sentence
-                                    )
+                                    MyLog.logBlockedWordDetected(reason)
+                                )
+                            }
+
+                            is BlockReason.BlockedSiteDetected -> {
+                                context.shareFile(
+                                    MyLog.logBlockedSite(reason)
                                 )
                             }
                         }

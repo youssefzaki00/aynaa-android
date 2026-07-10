@@ -108,9 +108,3 @@ fun ProtectYourDevice(enableProtection: () -> Unit, report: () -> Unit) {
 }
 
 
-// Preview for Design Time
-@Preview(showBackground = true, locale = "ar")
-@Composable
-fun PreviewEnableProtectionScreen() {
-    EnableProtectionScreen(Modifier, {}, { _-> }, DnsProtectionLevel.HIGH)
-}

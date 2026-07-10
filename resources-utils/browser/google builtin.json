@@ -1,0 +1,235 @@
+{
+  "meta": {
+    "versionName": "v2.1.1",
+    "versionCode": 22,
+    "manufacturer": "HONOR",
+    "model": "ALI-NX1"
+  },
+  "time": "2026-05-20 14:41:57",
+  "screenAnalysis": {
+    "appName": "عَيْنًا سَلْسَبِيلًا",
+    "hasAppName": false,
+    "isSettingsScreen": false,
+    "nodesCount": 38,
+    "pkg": "com.android.chrome",
+    "root": {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [],
+                                  "cls": "android.widget.TextView",
+                                  "text": "Tap the dino to play"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": "Try:"
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "text": "• "
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Turning off aeroplane mode"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "text": "• "
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Turning on mobile data or Wi-Fi"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "text": "• "
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Checking the signal in your area"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.widget.ListView",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "id": "suggestions-list",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [],
+                                  "cls": "android.widget.TextView",
+                                  "text": "ERR_INTERNET_DISCONNECTED"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "LOAD PAGE LATER"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "LOAD PAGE LATER"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "id": "save-page-for-later-button",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [],
+                                  "cls": "android.widget.TextView",
+                                  "id": "cancel-save-page-button",
+                                  "text": "Chrome will let you know when this page is ready. Cancel"
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "id": "main-message",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "id": "main-content",
+                          "text": ""
+                        },
+                        {
+                          "children": [],
+                          "cls": "android.widget.TextView",
+                          "id": "buttons",
+                          "text": ""
+                        },
+                        {
+                          "children": [],
+                          "cls": "android.widget.Button",
+                          "desc": "Dino game, tap to play",
+                          "text": ""
+                        }
+                      ],
+                      "cls": "android.view.View",
+                      "id": "main-frame-error",
+                      "text": ""
+                    }
+                  ],
+                  "cls": "android.view.View",
+                  "id": "content",
+                  "text": ""
+                }
+              ],
+              "cls": "android.webkit.WebView",
+              "text": "www.almasryalyoum.com"
+            }
+          ],
+          "cls": "android.widget.FrameLayout"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageButton",
+                  "desc": "Share link"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageButton",
+                  "desc": "Add to collection"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageButton",
+                  "desc": "Close tab",
+                  "id": "com.android.chrome:id/close_button"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageButton",
+                  "desc": "Minimize tab",
+                  "id": "com.android.chrome:id/custom_tabs_minimize_button"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "com.android.chrome:id/title_bar",
+                  "text": "www.almasryalyoum.com"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "com.android.chrome:id/url_bar",
+                  "text": "almasryalyoum.com"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageButton",
+                  "desc": "Customize and control Google Chrome",
+                  "id": "com.android.chrome:id/menu_button"
+                }
+              ],
+              "cls": "android.widget.FrameLayout",
+              "id": "com.android.chrome:id/toolbar"
+            }
+          ],
+          "cls": "android.view.ViewGroup",
+          "id": "com.android.chrome:id/toolbar_container"
+        }
+      ],
+      "cls": "android.widget.FrameLayout"
+    }
+  }
+}

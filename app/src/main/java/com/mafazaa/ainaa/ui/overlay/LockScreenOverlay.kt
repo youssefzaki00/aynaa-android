@@ -36,7 +36,7 @@ fun LockScreenOverlay(
     onShareLog: () -> Unit,
     onClose: () -> Unit
 ) {
-    val arabicLocale = Locale("ar",)
+    val arabicLocale = Locale("ar")
     val configuration = Configuration(LocalConfiguration.current)
     configuration.setLocale(arabicLocale)
     val arabicContext = LocalContext.current.createConfigurationContext(configuration)
@@ -130,6 +130,23 @@ fun LockScreenOverlay(
                                     textAlign = TextAlign.Center,
                                     modifier = Modifier.padding(bottom = 16.dp)
                                 )
+                            }
+
+                            is BlockReason.BlockedSiteDetected -> {
+                                Text(
+                                    text = stringResource(R.string.blocked_site_detected_text),
+                                    color = MaterialTheme.colorScheme.primary,
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    textAlign = TextAlign.Center,
+                                )
+                                Text(
+                                    text = reason.sentence,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    style = MaterialTheme.typography.bodySmall,
+                                    textAlign = TextAlign.Center,
+                                    modifier = Modifier.padding(bottom = 16.dp)
+                                )
+
                             }
                         }
                         Text(

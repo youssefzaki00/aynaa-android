@@ -6,6 +6,7 @@ import android.util.Log
 import com.mafazaa.ainaa.BuildConfig
 import com.mafazaa.ainaa.data.local.FakeFileRepo
 import com.mafazaa.ainaa.domain.FileRepo
+import com.mafazaa.ainaa.domain.models.BlockReason
 import com.mafazaa.ainaa.domain.models.ScreenAnalysis
 import java.io.File
 import java.text.SimpleDateFormat
@@ -139,13 +140,33 @@ object MyLog {
         return logFile
     }
 
-    fun logBlockedWordDetected(keyword: String, sentence: String): File {
-        val fileName = "${keyword}_blocked.txt"
+    fun logBlockedWordDetected(blockedWordDetected: BlockReason.BlockedWordDetected): File {
+        val fileName = "${blockedWordDetected.keyword}_blocked.txt"
         val logFile = fileRepo.getLogFile(fileName)
         fileRepo.wipeLog(fileName)
         val info = buildString {
-            append("Blocked keyword: $keyword\n")
-            append("Sentence: $sentence\n")
+            append("Blocked keyword: ${blockedWordDetected.keyword}\n")
+            append("Sentence: ${blockedWordDetected.sentence}\n")
+            append("Package Name: ${blockedWordDetected.packageName}\n")
+            append("Log file size: ${fileRepo.getLogSize()} bytes\n")
+            append(
+                "Time: ${
+                    DateFormat.format("yyyy-MM-dd HH:mm:ss", System.currentTimeMillis())
+                }\n"
+            )
+            append("Device: ${Build.MANUFACTURER} ${Build.MODEL}\n")
+            append("App: ${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})\n")
+        }
+        fileRepo.saveToLog(info, fileName)
+        return logFile
+    }
+    fun logBlockedSite(blockedSite: BlockReason.BlockedSiteDetected): File {
+        val fileName = "${blockedSite.domain}_blocked.txt"
+        val logFile = fileRepo.getLogFile(fileName)
+        fileRepo.wipeLog(fileName)
+        val info = buildString {
+            append("Blocked domain: ${blockedSite.domain}\n")
+            append("Sentence: ${blockedSite.sentence}\n")
             append("Log file size: ${fileRepo.getLogSize()} bytes\n")
             append(
                 "Time: ${

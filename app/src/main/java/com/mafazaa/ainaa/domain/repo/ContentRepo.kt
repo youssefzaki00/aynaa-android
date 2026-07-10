@@ -8,7 +8,11 @@ import kotlinx.coroutines.flow.StateFlow
 
 interface ContentRepo {
     val blockedWordsStatus: StateFlow<List<String>>
+    val excludedAppsStatus: StateFlow<List<String>>
+    val remoteBlockedAppsStatus: StateFlow<List<String>>
     fun getBlockedWords()
+    fun getExcludedApps()
+    fun getRemoteBlockedApps()
     fun removeKeyWord(word: String)
     fun addKeyWord(word: String)
 }

@@ -1,0 +1,2059 @@
+{
+  "meta": {
+    "versionName": "v2.1.0",
+    "versionCode": 21,
+    "manufacturer": "HONOR",
+    "model": "ALI-NX1"
+  },
+  "time": "2026-05-18 15:16:53",
+  "screenAnalysis": {
+    "appName": "عَيْنًا سَلْسَبِيلًا",
+    "hasAppName": false,
+    "isSettingsScreen": false,
+    "nodesCount": 363,
+    "pkg": "com.microsoft.emmx",
+    "root": {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.Image",
+                                      "desc": "1xBet",
+                                      "text": "987d02b2a8d69a55be32ce635228ee9e"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "desc": "1xBet"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Image",
+                                          "desc": "EG",
+                                          "text": "c6b7856442d1ac557d7494df2ca2ae81"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "desc": "EG"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": "1"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "desc": "Bonus",
+                                  "text": "rules?category\u003dfirst_deposit"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": "Log in"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "desc": "Log in"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": "Registration"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "desc": "Registration"
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "desc": "The first deposit bonus",
+                                                  "text": "ce1e62b538ccd8dad48ca0a8e73e330395x95cnr"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "The first deposit bonus"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "desc": "The first deposit bonus The first deposit bonus"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "desc": "Mega bonus for your first deposit",
+                                                  "text": "96814378d3b8f0175b94f86bf037ed4e95x95cnr"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "Mega bonus for your first deposit"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "desc": "Mega bonus for your first deposit Mega bonus for your first deposit"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "desc": "Star League",
+                                                  "text": "236e331567c88b8033185a6d4f606130r"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "Star League"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "desc": "Star League Star League"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "desc": "Wealth and eternal night",
+                                                  "text": "456"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "Wealth and eternal night"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "desc": "Wealth and eternal night Wealth and eternal night"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "desc": "ChickPoint",
+                                                  "text": "b2537345ab0dc46ce864d4c438904c9395x95cnr"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "ChickPoint"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "desc": "ChickPoint ChickPoint"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "desc": "Go Rosh",
+                                                  "text": "b4a111381e60592e0b65872f1fd38a3795x95cnr"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "Go Rosh"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "desc": "Go Rosh Go Rosh"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.widget.ListView",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "1xGames",
+                                                      "text": "games-no-faceless-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "1xGames"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "1xGames 1xGames"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "Crash",
+                                                      "text": "game-371-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Crash"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Crash Crash"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "Crystal",
+                                                      "text": "game-249-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Crystal"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Crystal Crystal"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "Burning Hot",
+                                                      "text": "game-373-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Burning Hot"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Burning Hot Burning Hot"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "Las Vegas",
+                                                      "text": "game-438-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Las Vegas"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Las Vegas Las Vegas"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "Western slot",
+                                                      "text": "game-169-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Western slot"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Western slot Western slot"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "Under and Over 7",
+                                                      "text": "game-69-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Under and Over 7"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Under and Over 7 Under and Over 7"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "Solitaire",
+                                                      "text": "game-158-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Solitaire"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Solitaire Solitaire"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "Vampire Curse",
+                                                      "text": "game-456-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Vampire Curse"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Vampire Curse Vampire Curse"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "21",
+                                                      "text": "game-58-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "21"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "21 21"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "Crash Point",
+                                                      "text": "game-601-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Crash Point"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Crash Point Crash Point"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "Apple Of Fortune",
+                                                      "text": "game-138-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Apple Of Fortune"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Apple Of Fortune Apple Of Fortune"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "Spin and Win",
+                                                      "text": "game-185-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Spin and Win"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Spin and Win Spin and Win"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "Midgard Zombies",
+                                                      "text": "game-572-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Midgard Zombies"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Midgard Zombies Midgard Zombies"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "Mayan Tomb",
+                                                      "text": "game-439-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Mayan Tomb"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Mayan Tomb Mayan Tomb"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "desc": "Gems Odyssey",
+                                                      "text": "game-316-circle"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Gems Odyssey"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Gems Odyssey Gems Odyssey"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.widget.ListView",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "id": "games-app",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "id": "games-app-banners",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "id": "games-app-banners",
+                          "text": ""
+                        },
+                        {
+                          "children": []
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Image",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "LIVE"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "Live",
+                                      "text": "live"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "SPORTS"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "Sports",
+                                      "text": "line"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Image",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "Favorites",
+                                      "text": "favorites"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Image",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "Search",
+                                      "text": "search-events"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.widget.ListView",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "com.google.android.material.navigation.NavigationView",
+                          "text": ""
+                        },
+                        {
+                          "children": [],
+                          "cls": "android.widget.TextView",
+                          "text": "LIVE"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "cls": "android.widget.TextView",
+                              "text": "MORE LIVE"
+                            },
+                            {
+                              "children": [],
+                              "cls": "android.widget.Image",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "desc": "MORE LIVE"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "desc": "722136520-francisco-cerundolo-alex-de-minaur"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Event in progress"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "/ "
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "3rd set"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Button",
+                                                  "desc": "Events",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "ATP. Hamburg"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Francisco Cerundolo1"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Alex De Minaur (3)1"
+                                                }
+                                              ],
+                                              "cls": "android.widget.ListView",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Round of 32"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "desc": "722163877-terence-atmane-tomas-martin-etcheverry"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Event in progress"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "/ "
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "1st set"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Button",
+                                                  "desc": "Events",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "ATP. Hamburg"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Terence Atmane0"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Tomas Martin Etcheverry0"
+                                                }
+                                              ],
+                                              "cls": "android.widget.ListView",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Round of 32"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "desc": "722162023-alycia-parks-moyuka-uchijima"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Event in progress"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "/ "
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "1st set"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Button",
+                                                  "desc": "Events",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "WTA. Rabat"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Alycia Parks (8)0"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Moyuka Uchijima0"
+                                                }
+                                              ],
+                                              "cls": "android.widget.ListView",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Round of 32"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "desc": "722136889-jil-belen-teichmann-julia-grabher"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Event in progress"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "/ "
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "2nd set"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Button",
+                                                  "desc": "Events",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "WTA. Rabat"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Jil Belen Teichmann1"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Julia Grabher0"
+                                                }
+                                              ],
+                                              "cls": "android.widget.ListView",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Round of 32"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "desc": "722158658-petra-marcinko-vera-zvonareva"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Event in progress"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "/ "
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "1st set"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Button",
+                                                  "desc": "Events",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "WTA. Rabat"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Petra Marcinko (6)0"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Vera Zvonareva (Q)0"
+                                                }
+                                              ],
+                                              "cls": "android.widget.ListView",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Round of 32"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.widget.ListView",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "cls": "android.widget.TextView",
+                              "text": "Recommended Live"
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "desc": "Recommended Live"
+                        },
+                        {
+                          "children": [],
+                          "cls": "android.widget.TextView",
+                          "text": "SPORTS"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "cls": "android.widget.TextView",
+                              "text": "MORE SPORTS"
+                            },
+                            {
+                              "children": [],
+                              "cls": "android.widget.Image",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "desc": "MORE SPORTS"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "desc": "329960062-arsenal-burnley"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "18/05 22:00"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Button",
+                                                  "desc": "Events",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "England. Premier League"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Arsenal"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Burnley"
+                                                }
+                                              ],
+                                              "cls": "android.widget.ListView",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Round 37"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "desc": "333131990-canada-denmark"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "18/05 17:20"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Button",
+                                                  "desc": "Events",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "IIHF World Championship. 2026"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Canada"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Denmark"
+                                                }
+                                              ],
+                                              "cls": "android.widget.ListView",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Preliminary Round. Group B"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "desc": "333128514-finland-usa"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "18/05 17:20"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Button",
+                                                  "desc": "Events",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "IIHF World Championship. 2026"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Finland"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "USA"
+                                                }
+                                              ],
+                                              "cls": "android.widget.ListView",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Preliminary Round. Group A"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "desc": "333649196-czech-republic-sweden"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "18/05 21:20"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Button",
+                                                  "desc": "Events",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "IIHF World Championship. 2026"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Czech Republic"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "Sweden"
+                                                }
+                                              ],
+                                              "cls": "android.widget.ListView",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.widget.ListView",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "cls": "android.widget.TextView",
+                              "text": "Recommended Sports"
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "desc": "Recommended Sports"
+                        },
+                        {
+                          "children": []
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.CheckBox",
+                                      "id": "seo-module-text",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": "1xBet"
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.Button",
+                                      "desc": "Collapse/Expand",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.CheckBox",
+                                      "id": "seo-module-links",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": "Popular events and sports news"
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.Button",
+                                      "desc": "Collapse/Expand",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.CheckBox",
+                                      "id": "seo-module-faq",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": "Most popular FAQ at 1xBet Egypt"
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.Button",
+                                      "desc": "Collapse/Expand",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "id": "seo-module",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "id": "seo-module-wrapper",
+                          "text": ""
+                        },
+                        {
+                          "children": [],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [],
+                          "cls": "android.widget.TextView",
+                          "id": "notifications-container",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "Sports"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "Casino"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Bet slip"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Bet slip"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "Log in"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Log in"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "Menu"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.widget.ListView",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "com.google.android.material.navigation.NavigationView",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        }
+                      ],
+                      "cls": "android.view.View",
+                      "id": "app",
+                      "text": ""
+                    }
+                  ],
+                  "cls": "android.view.View",
+                  "id": "__V3_HOST_APP__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "teleports",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__V3_HOST_APP__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "notification-cookies-container",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__GAMES_APP__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__PLATFORM_APPS__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__OFFICE_APP__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__BANNERS_CLIENT__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__WELCOME_APP__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__NUXT_THIRD_PARTY__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__BETTING_APP__",
+                  "text": ""
+                }
+              ],
+              "cls": "android.webkit.WebView",
+              "text": "1xBet Egypt 🇪🇬 Online sports betting ᐉ 1xBet online bookmaker log in: eg1xbet.com"
+            }
+          ],
+          "cls": "android.widget.FrameLayout"
+        },
+        {
+          "children": [],
+          "cls": "android.view.ViewGroup",
+          "id": "com.microsoft.emmx:id/edge_bottom_progress_container"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "cls": "android.widget.ImageButton",
+                          "desc": "Copilot",
+                          "id": "com.microsoft.emmx:id/edge_location_bar_copilot_button"
+                        }
+                      ],
+                      "cls": "android.widget.RelativeLayout",
+                      "id": "com.microsoft.emmx:id/edge_location_bar_copilot_button_container"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "cls": "android.widget.ImageButton",
+                              "desc": "Connection is secure",
+                              "id": "com.microsoft.emmx:id/location_bar_status_icon"
+                            }
+                          ],
+                          "cls": "android.widget.LinearLayout",
+                          "id": "com.microsoft.emmx:id/location_bar_status"
+                        },
+                        {
+                          "children": [],
+                          "cls": "android.widget.EditText",
+                          "id": "com.microsoft.emmx:id/url_bar",
+                          "text": "eg1xbet.com"
+                        }
+                      ],
+                      "cls": "android.widget.LinearLayout",
+                      "id": "com.microsoft.emmx:id/edge_location_bar_center"
+                    },
+                    {
+                      "children": [],
+                      "cls": "android.widget.ImageButton",
+                      "desc": "Immersive viewer",
+                      "id": "com.microsoft.emmx:id/edge_reader_mode_button"
+                    },
+                    {
+                      "children": [],
+                      "cls": "android.widget.ImageButton",
+                      "desc": "Refresh",
+                      "id": "com.microsoft.emmx:id/refresh_button"
+                    }
+                  ],
+                  "cls": "android.view.ViewGroup",
+                  "id": "com.microsoft.emmx:id/location_bar"
+                }
+              ],
+              "cls": "android.widget.FrameLayout",
+              "id": "com.microsoft.emmx:id/toolbar"
+            }
+          ],
+          "cls": "android.view.ViewGroup",
+          "id": "com.microsoft.emmx:id/edge_bottom_omnibox_container"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageButton",
+                  "desc": "Go back",
+                  "id": "com.microsoft.emmx:id/back_button"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageButton",
+                  "desc": "Go forward",
+                  "id": "com.microsoft.emmx:id/forward_button"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageButton",
+                  "desc": "Add New tab",
+                  "id": "com.microsoft.emmx:id/edge_bottom_bar_plus_button"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.Button",
+                  "desc": "Switch or close tabs",
+                  "id": "com.microsoft.emmx:id/tab_center_button"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.Button",
+                  "desc": "Browser menu",
+                  "id": "com.microsoft.emmx:id/overflow_button_bottom"
+                }
+              ],
+              "cls": "android.widget.LinearLayout",
+              "desc": "Bottom toolbar",
+              "id": "com.microsoft.emmx:id/edge_bottom_bar"
+            }
+          ],
+          "cls": "android.widget.LinearLayout",
+          "id": "com.microsoft.emmx:id/edge_bottom_bar_container"
+        }
+      ],
+      "cls": "android.widget.FrameLayout"
+    }
+  }
+}

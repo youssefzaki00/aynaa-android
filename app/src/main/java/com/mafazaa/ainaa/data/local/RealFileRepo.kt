@@ -1,12 +1,13 @@
 package com.mafazaa.ainaa.data.local
 
 import android.content.Context
+import android.os.Environment
 import com.mafazaa.ainaa.domain.FileRepo
 import java.io.File
 
 class RealFileRepo(val context: Context) : FileRepo {
 
-    override fun getLogFile(fileName: String): File = File(context.cacheDir, fileName)
+    override fun getLogFile(fileName: String): File = File(context.filesDir, fileName)
     override fun getLogSize(fileName: String): Long {
         return getLogFile(fileName).length()
     }

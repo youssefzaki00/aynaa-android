@@ -9,21 +9,21 @@ plugins {
 
 android {
     namespace = "com.mafazaa.ainaa"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.mafazaa.ainaa"
         minSdk = 26
         targetSdk = 36
-        versionCode = 19
-        versionName = "v0.0.19"
+        versionCode = 24
+        versionName = "v2.2.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false //todo
             isShrinkResources = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -43,6 +43,14 @@ android {
         buildConfig = true
         compose = true
     }
+
+    applicationVariants.all {
+        outputs.forEach { output ->
+            if (output is com.android.build.gradle.api.ApkVariantOutput) {
+                output.outputFileName = "Ainaa-$versionName-$name.apk"
+            }
+        }
+    }
 }
 
 dependencies {
@@ -50,6 +58,7 @@ dependencies {
     implementation(libs.luaj.luaj.jse)
 
     testImplementation(libs.junit.junit)
+    testImplementation(libs.ktor.client.cio)
     // Compose
     val composeBom = platform("androidx.compose:compose-bom:2024.09.02")
     implementation(composeBom)

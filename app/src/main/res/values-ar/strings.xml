@@ -144,4 +144,5 @@
     <string name="blocked_word_detected_text">تم اكتشاف كلمة محجوبة</string>
     <string name="stop_blocking">إيقاف الحجب</string>
     <string name="start_blocking">استئناف الحجب</string>
+    <string name="blocked_site_detected_text">blocked site detected</string>
 </resources>

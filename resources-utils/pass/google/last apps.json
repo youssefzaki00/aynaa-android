@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "versionName": "v2.1.0",
+    "versionCode": 21,
+    "manufacturer": "Google",
+    "model": "sdk_gphone64_x86_64"
+  },
+  "time": "2026-05-17 23:47:05",
+  "screenAnalysis": {
+    "appName": "عَيْنًا سَلْسَبِيلًا",
+    "hasAppName": true,
+    "isSettingsScreen": false,
+    "nodesCount": 9,
+    "pkg": "com.google.android.apps.nexuslauncher",
+    "root": {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "cls": "android.widget.Button",
+              "id": "com.google.android.apps.nexuslauncher:id/clear_all",
+              "text": "Clear all"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "cls": "android.view.View",
+                  "desc": "Settings Accessibility",
+                  "id": "com.google.android.apps.nexuslauncher:id/snapshot"
+                }
+              ],
+              "cls": "android.widget.FrameLayout",
+              "id": "com.google.android.apps.nexuslauncher:id/task_view_single"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "cls": "android.view.View",
+                  "desc": "عَيْنًا سَلْسَبِيلًا",
+                  "id": "com.google.android.apps.nexuslauncher:id/snapshot"
+                }
+              ],
+              "cls": "android.widget.FrameLayout",
+              "id": "com.google.android.apps.nexuslauncher:id/task_view_single"
+            }
+          ],
+          "cls": "android.widget.ListView",
+          "desc": "",
+          "id": "com.google.android.apps.nexuslauncher:id/overview_panel"
+        },
+        {
+          "children": [],
+          "cls": "android.widget.Button",
+          "id": "com.google.android.apps.nexuslauncher:id/action_screenshot",
+          "text": "Screenshot"
+        },
+        {
+          "children": [],
+          "cls": "android.widget.Button",
+          "id": "com.google.android.apps.nexuslauncher:id/action_select",
+          "text": "Select"
+        }
+      ],
+      "cls": "android.widget.FrameLayout"
+    }
+  }
+}

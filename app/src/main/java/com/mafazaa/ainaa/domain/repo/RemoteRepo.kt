@@ -16,5 +16,9 @@ interface RemoteRepo {
 
     suspend fun getAllBlockedWords(): List<String>?
 
+    suspend fun authenticate(deviceId: String): String?
 
+    suspend fun getExcludedApps(): List<String>?
+
+    suspend fun getApps(lastSync: String? =null): List<String>?
 }

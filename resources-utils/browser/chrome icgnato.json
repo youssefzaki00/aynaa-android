@@ -1,0 +1,3202 @@
+{
+  "meta": {
+    "versionName": "v2.1.0",
+    "versionCode": 21,
+    "manufacturer": "Google",
+    "model": "sdk_gphone64_x86_64"
+  },
+  "time": "2026-05-17 23:55:26",
+  "screenAnalysis": {
+    "appName": "عَيْنًا سَلْسَبِيلًا",
+    "hasAppName": false,
+    "isSettingsScreen": false,
+    "nodesCount": 576,
+    "pkg": "com.android.chrome",
+    "root": {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.Image",
+                                      "text": "1xBet"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "desc": "1xBet"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": "تسجيل الدخول"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "desc": "تسجيل الدخول"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": "التسجيل"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "desc": "التسجيل"
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "text": "Barca 1xFamily"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "Barca 1xFamily"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "desc": "Barca 1xFamily Barca 1xFamily"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "text": "PSG: Champion’s Contract"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "PSG: Champion’s Contract"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "desc": "PSG: Champion’s Contract PSG: Champion’s Contract"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "text": "In Pursuit of the Scudetto"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "In Pursuit of the Scudetto"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "desc": "In Pursuit of the Scudetto In Pursuit of the Scudetto"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "text": "كلاسيكيات ألعاب الفيديو"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "كلاسيكيات ألعاب الفيديو"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "desc": "كلاسيكيات ألعاب الفيديو كلاسيكيات ألعاب الفيديو"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "text": "ESPORTS ERA"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "ESPORTS ERA"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "desc": "ESPORTS ERA ESPORTS ERA"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.widget.ListView",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "1xGames"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "1xGames"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "1xGames 1xGames"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "Crash"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Crash"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Crash Crash"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "Crystal"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Crystal"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Crystal Crystal"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "Burning Hot"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Burning Hot"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Burning Hot Burning Hot"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "Scratch Card"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Scratch Card"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Scratch Card Scratch Card"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "Western slot"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Western slot"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Western slot Western slot"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "Under and Over 7"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Under and Over 7"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Under and Over 7 Under and Over 7"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "Solitaire"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Solitaire"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Solitaire Solitaire"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "Vampire Curse"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Vampire Curse"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Vampire Curse Vampire Curse"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "21"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "21"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "21 21"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "Crash Point"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Crash Point"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Crash Point Crash Point"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "Apple Of Fortune"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Apple Of Fortune"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Apple Of Fortune Apple Of Fortune"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "Spin and Win"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Spin and Win"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Spin and Win Spin and Win"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "Midgard Zombies"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Midgard Zombies"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Midgard Zombies Midgard Zombies"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "Mayan Tomb"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Mayan Tomb"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Mayan Tomb Mayan Tomb"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.Image",
+                                                      "text": "Gems Odyssey"
+                                                    },
+                                                    {
+                                                      "children": [],
+                                                      "cls": "android.widget.TextView",
+                                                      "text": "Gems Odyssey"
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "desc": "Gems Odyssey Gems Odyssey"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.widget.ListView",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "id": "games-app",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "id": "games-app-banners",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "id": "games-app-banners",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "UCL"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "UCL"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "Europa League"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "Europa League"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "EPL"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "EPL"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "Indian League"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "Indian League"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "Egyptian PL"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "Egyptian PL"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "Serie A"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "Serie A"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "LaLiga"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "LaLiga"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "UECL"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "UECL"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            },
+                            {
+                              "children": [],
+                              "cls": "android.widget.Button",
+                              "text": "رجوع"
+                            },
+                            {
+                              "children": [],
+                              "cls": "android.widget.Button",
+                              "text": "التالي"
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Image",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "بث مباشر"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "بث مباشر"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "الرياضات"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "الرياضات"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Image",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "المفضلة"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Image",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "البحث"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.widget.ListView",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [],
+                          "cls": "android.widget.TextView",
+                          "text": "بث مباشر"
+                        },
+                        {
+                          "children": [],
+                          "cls": "android.widget.TextView",
+                          "text": "(827)"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "cls": "android.widget.TextView",
+                              "text": "المزيد من بث مباشر"
+                            },
+                            {
+                              "children": [],
+                              "cls": "android.widget.Image",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "desc": "المزيد من بث مباشر"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.view.View",
+                                          "desc": "721997197-barcelona-real-betis"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Image",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "76:26"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "/ "
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "الشوط الـ2"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Button",
+                                              "text": "بث لايف"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Button",
+                                              "text": "الأحداث"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "بطولة اسبانيا. مثال"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "text": "نادي كرة القدم برشلونة3"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "text": "ريال بيتيس1"
+                                            }
+                                          ],
+                                          "cls": "android.widget.ListView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "جولة 37"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.view.View",
+                                          "desc": "721997456-lille-osc-auxerre"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Image",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "90:00"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "/ "
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "الشوط الـ2"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Button",
+                                              "text": "بث لايف"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Button",
+                                              "text": "الأحداث"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "بطولة فرنسا. الدوري الأول"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "text": "OSC ليل0"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "text": "نادي كرة القدم أوكسير2"
+                                            }
+                                          ],
+                                          "cls": "android.widget.ListView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "الجولة 34"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.widget.ListView",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "cls": "android.widget.TextView",
+                              "text": "موصى به بث مباشر"
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "desc": "موصى به بث مباشر"
+                        },
+                        {
+                          "children": [],
+                          "cls": "android.widget.TextView",
+                          "text": "الرياضات"
+                        },
+                        {
+                          "children": [],
+                          "cls": "android.widget.TextView",
+                          "text": "(5795)"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "cls": "android.widget.TextView",
+                              "text": "المزيد من الرياضات"
+                            },
+                            {
+                              "children": [],
+                              "cls": "android.widget.Image",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "desc": "المزيد من الرياضات"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "desc": "329960062-arsenal-burnley"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "18/05 22:00"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Button",
+                                                  "text": "الأحداث"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "بطولة اٍنجلترا. الدوري الممتاز"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "أرسنال"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "نادي كرة القدم بيرنلي"
+                                                }
+                                              ],
+                                              "cls": "android.widget.ListView",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "جولة 37"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "فوز1 1.097"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "تعادل 13.6"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "فوز2 32"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "1X 1.001"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "12 1.05"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "2X 8.7"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع 3.5 اكثر من 1.929"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع 3.5 اقل من 2.012"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "كلا الفريقين سيسجل - نعم 2.44"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "كلا الفريقين سيسجل - لا 1.503"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "هانديكاب 1 (-2.5) 1.886"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "هانديكاب 2 (+2.5) 2.062"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع الفردي 1 3.5 اكثر من 2.3"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع الفردي 1 3.5 اقل من 1.63"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع الفردي 2 0.5 اكثر من 2.45"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع الفردي 2 0.5 اقل من 1.55"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "المجموع الاسيوي 3.75 اكثر من 2.127"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "المجموع الاسيوي 3.75 اقل من 1.835"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "هانديكاب الاسيوي -2.25 1 1.692"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "هانديكاب الاسيوي 2.25 2 2.357"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        }
+                                                      ],
+                                                      "cls": "android.widget.ListView",
+                                                      "text": ""
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "desc": "329861178-red-bull-bragantino-ec-vitoria-salvador"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "18/05 00:30"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Button",
+                                                  "text": "الأحداث"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "البرازيل. البطولة البرازيلية. سلسلة A"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "ريد بول براغانتينو"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "فيتوريا"
+                                                }
+                                              ],
+                                              "cls": "android.widget.ListView",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "جولة 16"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "فوز1 1.576"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "تعادل 4.17"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "فوز2 5.97"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "1X 1.137"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "12 1.238"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "2X 2.424"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع 2.5 اكثر من 1.856"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع 2.5 اقل من 1.988"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "كلا الفريقين سيسجل - نعم 1.86"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "كلا الفريقين سيسجل - لا 1.843"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "هانديكاب 1 (-1.5) 2.521"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "هانديكاب 2 (+1.5) 1.55"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع الفردي 1 1.5 اكثر من 1.666"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع الفردي 1 1.5 اقل من 2.16"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع الفردي 2 0.5 اكثر من 1.63"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع الفردي 2 0.5 اقل من 2.11"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "المجموع الاسيوي 2.75 اكثر من 2.071"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "المجموع الاسيوي 2.75 اقل من 1.79"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "هانديكاب الاسيوي -1.25 1 2.224"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "هانديكاب الاسيوي 1.25 2 1.689"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        }
+                                                      ],
+                                                      "cls": "android.widget.ListView",
+                                                      "text": ""
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.view.View",
+                                              "desc": "329861186-chapecoense-clube-do-remo"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "18/05 00:30"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Button",
+                                                  "text": "الأحداث"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "البرازيل. البطولة البرازيلية. سلسلة A"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "نادي كرة القدم شابيكوينسي"
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.view.View",
+                                                  "text": "كلوب ريمو"
+                                                }
+                                              ],
+                                              "cls": "android.widget.ListView",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "جولة 16"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "فوز1 2.553"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "تعادل 3.23"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "فوز2 2.934"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "1X 1.416"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "12 1.355"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "2X 1.525"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع 2.5 اكثر من 2.016"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع 2.5 اقل من 1.833"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "كلا الفريقين سيسجل - نعم 1.72"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "كلا الفريقين سيسجل - لا 2.007"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "هانديكاب 1 (0) 1.805"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "هانديكاب 2 (0) 2.051"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع الفردي 1 1.5 اكثر من 2.39"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع الفردي 1 1.5 اقل من 1.54"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع الفردي 2 1.5 اكثر من 2.61"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "مجموع الفردي 2 1.5 اقل من 1.46"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "المجموع الاسيوي 2.25 اكثر من 1.781"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "المجموع الاسيوي 2.25 اقل من 2.083"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "هانديكاب الاسيوي -0.25 1 2.14"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "cls": "android.widget.Button",
+                                                              "text": "هانديكاب الاسيوي 0.25 2 1.741"
+                                                            }
+                                                          ],
+                                                          "cls": "android.view.View",
+                                                          "text": ""
+                                                        }
+                                                      ],
+                                                      "cls": "android.widget.ListView",
+                                                      "text": ""
+                                                    }
+                                                  ],
+                                                  "cls": "android.view.View",
+                                                  "text": ""
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.widget.ListView",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "cls": "android.widget.TextView",
+                              "text": "موصى به الرياضات"
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "desc": "موصى به الرياضات"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [],
+                                  "cls": "android.widget.TextView",
+                                  "text": "كازينو"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "المزيد من كازينو"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Image",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "المزيد من كازينو"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Aviatrix"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Aviatrix"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Aviatrix Aviatrix"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Outsourced"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Outsourced"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Outsourced Outsourced"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Big Bass Splash 1000"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Big Bass Splash 1000"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Big Bass Splash 1000 Big Bass Splash 1000"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Aztec Gems™"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Aztec Gems™"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Aztec Gems™ Aztec Gems™"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Roman Riches Jackpot"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Roman Riches Jackpot"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Roman Riches Jackpot Roman Riches Jackpot"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Royalty of Olympus Extreme"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Royalty of Olympus Extreme"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Royalty of Olympus Extreme Royalty of Olympus Extreme"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "777 Juicy Wins"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "777 Juicy Wins"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "777 Juicy Wins 777 Juicy Wins"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "3 Charge Buffalo"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "3 Charge Buffalo"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "3 Charge Buffalo 3 Charge Buffalo"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.widget.ListView",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [],
+                                  "cls": "android.widget.TextView",
+                                  "text": "1XLIVE"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "المزيد من 1XLIVE"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Image",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "المزيد من 1XLIVE"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Golden Blackjack VIP"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Golden Blackjack VIP"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Golden Blackjack VIP Golden Blackjack VIP"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Golden Blackjack 2"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Golden Blackjack 2"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Golden Blackjack 2 Golden Blackjack 2"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Roulette Asia"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Roulette Asia"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Roulette Asia Roulette Asia"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "1x Ice Fishing"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "1x Ice Fishing"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "1x Ice Fishing 1x Ice Fishing"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "1x Roulette"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "1x Roulette"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "1x Roulette 1x Roulette"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Venice Blackjack VIP"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Venice Blackjack VIP"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Venice Blackjack VIP Venice Blackjack VIP"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Russian Roulette"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Russian Roulette"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Russian Roulette Russian Roulette"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Bar Blackjack 2"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Bar Blackjack 2"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Bar Blackjack 2 Bar Blackjack 2"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.widget.ListView",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [],
+                                  "cls": "android.widget.TextView",
+                                  "text": "TV GAMES"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "المزيد من TV GAMES"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Image",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "المزيد من TV GAMES"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Live Lotto"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Live Lotto"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Live Lotto Live Lotto"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Andar Bahar"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Andar Bahar"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Andar Bahar Andar Bahar"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Teen Patti"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Teen Patti"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Teen Patti Teen Patti"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "WheelBet"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "WheelBet"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "WheelBet WheelBet"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Poker"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Poker"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Poker Poker"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Fast Keno"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Fast Keno"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Fast Keno Fast Keno"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Spin2Wheels"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Spin2Wheels"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Spin2Wheels Spin2Wheels"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.Image",
+                                              "text": "Wheelbet Bonus"
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "Wheelbet Bonus"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "Wheelbet Bonus Wheelbet Bonus"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.widget.ListView",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.widget.ListView",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.CheckBox",
+                                      "id": "seo-module-text",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": "1xBet"
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.Button",
+                                      "text": "Collapse/Expand"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.CheckBox",
+                                      "id": "seo-module-links",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": "الأحداث الأكثر شعبية والأخبار الرياضية"
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.Button",
+                                      "text": "Collapse/Expand"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.CheckBox",
+                                      "id": "seo-module-faq",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.TextView",
+                                      "text": "الأسئلة الشائعة الأكثر شعبية في 1xBet مصر"
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.Button",
+                                      "text": "Collapse/Expand"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "id": "seo-module",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "id": "seo-module-wrapper",
+                          "text": ""
+                        },
+                        {
+                          "children": [],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [],
+                          "cls": "android.widget.TextView",
+                          "id": "notifications-container",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "الرياضة"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "كازينو"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": ""
+                                            },
+                                            {
+                                              "children": [],
+                                              "cls": "android.widget.TextView",
+                                              "text": "القسيمة"
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "القسيمة"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "تسجيل الدخول"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "desc": "تسجيل الدخول"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.Image",
+                                                  "text": ""
+                                                },
+                                                {
+                                                  "children": [],
+                                                  "cls": "android.widget.TextView",
+                                                  "text": "القائمة"
+                                                }
+                                              ],
+                                              "cls": "android.view.View",
+                                              "text": ""
+                                            }
+                                          ],
+                                          "cls": "android.view.View",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.widget.ListView",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [],
+                                  "cls": "android.widget.Button",
+                                  "text": "إغلاق"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.Button",
+                                      "text": "احصل على 81000 EGP في التطبيق"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        }
+                      ],
+                      "cls": "android.view.View",
+                      "id": "app",
+                      "text": ""
+                    }
+                  ],
+                  "cls": "android.view.View",
+                  "id": "__V3_HOST_APP__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "teleports",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__V3_HOST_APP__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "notification-cookies-container",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__BANNERS_CLIENT__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__GAMES_APP__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__PLATFORM_APPS__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__NUXT_THIRD_PARTY__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__BETTING_APP__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__OFFICE_APP__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "inline-modal-__WELCOME_APP__",
+                  "text": ""
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "id": "lqk2l7bq",
+                  "text": ""
+                }
+              ],
+              "cls": "android.webkit.WebView",
+              "text": "1xBet مصر | تسجيل الدخول، مراهنات رياضية وكازينو أون لاين – أفضل العروض 2026"
+            }
+          ],
+          "cls": "android.widget.FrameLayout"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "cls": "android.widget.ImageButton",
+              "desc": "Open the home page",
+              "id": "com.android.chrome:id/home_button"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "cls": "android.widget.ImageView",
+                      "desc": "Incognito mode",
+                      "id": "com.android.chrome:id/location_bar_incognito_badge"
+                    },
+                    {
+                      "children": [],
+                      "cls": "android.widget.ImageView",
+                      "desc": "Connection is secure",
+                      "id": "com.android.chrome:id/location_bar_status_icon"
+                    }
+                  ],
+                  "cls": "android.widget.LinearLayout",
+                  "id": "com.android.chrome:id/location_bar_status"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.EditText",
+                  "id": "com.android.chrome:id/url_bar",
+                  "text": "eg-1xbet.com/ar"
+                }
+              ],
+              "cls": "android.widget.FrameLayout",
+              "id": "com.android.chrome:id/location_bar"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageButton",
+                  "desc": "New tab",
+                  "id": "com.android.chrome:id/optional_toolbar_button"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageButton",
+                  "desc": "See 1 tab",
+                  "id": "com.android.chrome:id/tab_switcher_button"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.ImageButton",
+                  "desc": "Customize and control Google Chrome",
+                  "id": "com.android.chrome:id/menu_button"
+                }
+              ],
+              "cls": "android.widget.LinearLayout",
+              "id": "com.android.chrome:id/toolbar_buttons"
+            }
+          ],
+          "cls": "android.widget.FrameLayout",
+          "id": "com.android.chrome:id/toolbar"
+        }
+      ],
+      "cls": "android.widget.FrameLayout"
+    }
+  }
+}

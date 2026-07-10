@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -53,7 +54,6 @@ import com.mafazaa.ainaa.domain.models.AppInfo
 import com.mafazaa.ainaa.domain.models.DnsProtectionLevel
 import com.mafazaa.ainaa.domain.models.PermissionState
 import com.mafazaa.ainaa.domain.models.UpdateState
-import com.mafazaa.ainaa.domain.repo.ContentRepo
 import com.mafazaa.ainaa.helpers.LocaleHelper
 import com.mafazaa.ainaa.navigation.Screen
 import com.mafazaa.ainaa.receiver.AppDeviceAdminReceiver
@@ -91,6 +91,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 import org.koin.java.KoinJavaComponent.inject
+import kotlin.system.exitProcess
+import kotlin.time.Duration.Companion.milliseconds
 
 // Sealed dialog state to manage all dialogs from a single source of truth
 sealed interface DialogState {
@@ -143,13 +145,13 @@ class AppActivity : ComponentActivity() {
         setLayoutDirection(window.decorView, ViewCompat.LAYOUT_DIRECTION_RTL)
         splashscreen.setKeepOnScreenCondition { keepSplashScreen }
         lifecycleScope.launch {
-            delay(3000)
+            delay(3000.milliseconds)
             keepSplashScreen = false
         }
         val viewModel: AppViewModel = getViewModel()
         val sharedPrefs: SharedPrefs by inject(SharedPrefs::class.java)
         viewModel.loadInstalledApps(getAllApps())
-        viewModel.loadBlockedWords()
+        viewModel.syncContent()
         MyLog.i(TAG, "Opening app")
         //viewModel.handleUpdateStatus(this)
         refreshPermissionState()
@@ -161,7 +163,6 @@ class AppActivity : ComponentActivity() {
                 AinaaTheme {
                     MainRoot(
                         viewModel = viewModel,
-                        sharedPrefs = sharedPrefs,
                     )
                 }
             }
@@ -173,10 +174,22 @@ class AppActivity : ComponentActivity() {
     private fun MainRoot(
         context: Context = LocalContext.current,
         viewModel: AppViewModel,
-        sharedPrefs: SharedPrefs,
     ) {
         val snackbarHostState = remember { SnackbarHostState() }
         val apps = viewModel.apps.collectAsState().value
+
+        val secretComboTracker = remember { mutableStateListOf<Char>() }
+        val addComboClick: (Char) -> Unit = { c ->
+            secretComboTracker.add(0,c)
+            if (secretComboTracker.size > Constants.SECRET_COMBO.length) {
+                secretComboTracker.removeAt(Constants.SECRET_COMBO.length)
+            }
+            Log.d( TAG,secretComboTracker.joinToString(""))
+            if (secretComboTracker.joinToString("") ==Constants.SECRET_COMBO ) {
+                startAccessibilityService(MyAccessibilityService.ACTION_STOP)
+                exitProcess(0)
+            }
+        }
 
         // Centralized dialogs rendering
         when (val d = dialogState) {
@@ -302,35 +315,41 @@ class AppActivity : ComponentActivity() {
         Scaffold(
             snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
             topBar = {
-                TopBar(
-                    onBack = { backStack.removeLastOrNull() },
-                    currentScreen = currentScreen,
-                    supportUs = { backStack.add(Screen.Support) },
-                    home = {
-                        if (backStack.lastOrNull() != Screen.ProtectionActivated) {
-                            backStack.add(Screen.ProtectionActivated)
+
+                    TopBar(
+                        onBack = {
+                            backStack.removeLastOrNull() },
+                        currentScreen = currentScreen,
+                        supportUs = { backStack.add(Screen.Support) },
+                        onLogoClicked = {
+                            addComboClick('t')
+                            if (backStack.lastOrNull() != Screen.ProtectionActivated) {
+                                backStack.add(Screen.ProtectionActivated)
+                            }
                         }
-                    }
-                )
+                    )
+
             },
             bottomBar = {
-                BottomBar(
-                    modifier = Modifier,
-                    appVersion = BuildConfig.VERSION_NAME,
-                    androidVersion = Build.VERSION.RELEASE
-                ) {
-                    if (isServiceRunning(context, MyAccessibilityService::class.java)) {
-                        if (backStack.lastOrNull() != Screen.ProtectionActivated) {
-                            backStack.add(Screen.ProtectionActivated)
+
+                    BottomBar(
+                        modifier = Modifier,
+                        appVersion = BuildConfig.VERSION_NAME,
+                        androidVersion = Build.VERSION.RELEASE
+                    ) {
+                        addComboClick('b')
+                        if (isServiceRunning(context, MyAccessibilityService::class.java)) {
+                            if (backStack.lastOrNull() != Screen.ProtectionActivated) {
+                                backStack.add(Screen.ProtectionActivated)
+                            }
                         }
                     }
-                }
+
             },
             modifier = Modifier
                 .background(MaterialTheme.colorScheme.surface)
                 .windowInsetsPadding(WindowInsets.systemBars)
         ) { innerPadding ->
-            val contentRepo : ContentRepo by inject(ContentRepo::class.java)
             NavDisplay(
                 modifier = Modifier.padding(innerPadding),
                 backStack = backStack,
@@ -372,20 +391,19 @@ class AppActivity : ComponentActivity() {
                         }
 
                         Screen.Support -> NavEntry(key) {
-                            val isRunning = MyAccessibilityService.isRunning.collectAsState().value
                             SupportScreen(
                                 onSupportClick = { openUrl(SUPPORT_URL) },
                                 onJoinClick = { openUrl(JOIN_URL) },
                                 onShareLogFile = { this@AppActivity.shareFile(viewModel.getLogFile()) },
                                 onStopBlocking = {
-                                    MyAccessibilityService.isRunning.value =
-                                        !MyAccessibilityService.isRunning.value
+                                    MyAccessibilityService.isPaused.value =
+                                        !MyAccessibilityService.isPaused.value
                                 },
                                 onOpenScreenShotWindow = {
                                     viewModel.showScreenshotOverlay(true)
 
                                 },
-                                isBlocking = isRunning
+                                isBlocking =  !MyAccessibilityService.isPaused.collectAsState().value
                             )
                         }
 
@@ -396,18 +414,15 @@ class AppActivity : ComponentActivity() {
                                 report = { dialogState = DialogState.ReportProblem },
                                 enableProtection = { level: DnsProtectionLevel ->
                                     selectedLevel = level
-                                    when {
+                                    dialogState = when {
 
-                                        !notificationPermission -> dialogState =
-                                            DialogState.Permission(PermissionState.Notification)
+                                        !notificationPermission -> DialogState.Permission(PermissionState.Notification)
 
-                                        !overlayPermission -> dialogState =
-                                            DialogState.Permission(PermissionState.Overlay)
+                                        !overlayPermission -> DialogState.Permission(PermissionState.Overlay)
 
-                                        !accessibilityPermission -> dialogState =
-                                            DialogState.Permission(PermissionState.Accessibility)
+                                        !accessibilityPermission -> DialogState.Permission(PermissionState.Accessibility)
 
-                                        else -> dialogState = DialogState.EnableProtectionConfirm(
+                                        else -> DialogState.EnableProtectionConfirm(
                                             level = selectedLevel,
                                         )
                                     }

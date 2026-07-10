@@ -1,0 +1,1037 @@
+{
+  "meta": {
+    "versionName": "v2.1.0",
+    "versionCode": 21,
+    "manufacturer": "HONOR",
+    "model": "ALI-NX1"
+  },
+  "time": "2026-05-18 15:26:13",
+  "screenAnalysis": {
+    "appName": "عَيْنًا سَلْسَبِيلًا",
+    "hasAppName": false,
+    "isSettingsScreen": false,
+    "nodesCount": 180,
+    "pkg": "org.telegram.messenger",
+    "root": {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "cls": "android.widget.Image",
+                  "text": ""
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "cls": "android.widget.Image",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "cls": "android.widget.Button",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "cls": "android.widget.Image",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [],
+                                  "cls": "android.view.View",
+                                  "text": "aynaa Backend API 1.0.2 OAS 3.0"
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            },
+                            {
+                              "children": [],
+                              "cls": "android.widget.TextView",
+                              "text": "Production-ready REST API for aynaa - Parental Control \u0026 Content Filtering Android App"
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "cls": "android.widget.TextView",
+                              "text": "Servers"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.view.View",
+                                      "id": "servers",
+                                      "text": "http://localhost:5000/api/v1 - Development server"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            },
+                            {
+                              "children": [],
+                              "cls": "android.widget.Button",
+                              "text": "Authorize"
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "Authentication"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "Authentication"
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.Button",
+                                      "text": "Collapse operation"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "id": "operations-tag-Authentication",
+                                  "text": "Authentication Collapse operation"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "POST /auth /signup Register user"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "post ​/auth​/signup",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Authentication-post_auth_signup",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "POST /auth /user /login Login user"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "post ​/auth​/user​/login",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Authentication-post_auth_user_login",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "POST /auth /admin /login Login admin"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "post ​/auth​/admin​/login",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Authentication-post_auth_admin_login",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "GET /auth /me Get profile"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "get ​/auth​/me",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Authentication-get_auth_me",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "Keywords"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "Keywords"
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.Button",
+                                      "text": "Collapse operation"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "id": "operations-tag-Keywords",
+                                  "text": "Keywords Collapse operation"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "POST /keywords Create keyword"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "post ​/keywords",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Keywords-post_keywords",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "GET /keywords Get keywords"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "get ​/keywords",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Keywords-get_keywords",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "PATCH /keywords /{id} Update keyword"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "patch ​/keywords​/{id}",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Keywords-patch_keywords__id_",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "DELETE /keywords /{id} Delete keyword"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "delete ​/keywords​/{id}",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Keywords-delete_keywords__id_",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "PATCH /keywords /{id} /toggle Toggle keyword status"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "patch ​/keywords​/{id}​/toggle",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Keywords-patch_keywords__id__toggle",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "Sites"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "Sites"
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.Button",
+                                      "text": "Collapse operation"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "id": "operations-tag-Sites",
+                                  "text": "Sites Collapse operation"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "GET /sites Get sites"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "get ​/sites",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Sites-get_sites",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "POST /sites Create site"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "post ​/sites",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Sites-post_sites",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "PATCH /sites /{id} Update site"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "patch ​/sites​/{id}",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Sites-patch_sites__id_",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "DELETE /sites /{id} Delete site"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "delete ​/sites​/{id}",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Sites-delete_sites__id_",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "POST /sites /upload Upload a text file of blocked sites for bulk import"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "post ​/sites​/upload",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Sites-post_sites_upload",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": "Excluded Apps"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "desc": "Excluded Apps"
+                                    },
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.Button",
+                                      "text": "Collapse operation"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "id": "operations-tag-Excluded_Apps",
+                                  "text": "Excluded Apps Collapse operation"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "POST /excluded-apps Create excluded app"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "post ​/excluded-apps",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Excluded_Apps-post_excluded_apps",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "GET /excluded-apps Get excluded apps"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "get ​/excluded-apps",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Excluded_Apps-get_excluded_apps",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "PATCH /excluded-apps /{id} Update excluded app"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "patch ​/excluded-apps​/{id}",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Excluded_Apps-patch_excluded_apps__id_",
+                                      "text": ""
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "DELETE /excluded-apps /{id} Delete excluded app"
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.TextView",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "authorization button unlocked",
+                                          "text": ""
+                                        },
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "desc": "delete ​/excluded-apps​/{id}",
+                                          "text": ""
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "id": "operations-Excluded_Apps-delete_excluded_apps__id_",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "cls": "android.widget.Button",
+                                      "text": "Schemas"
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "text": "Schemas"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "User"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "id": "model-User",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "Keyword"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "id": "model-Keyword",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "Category"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "id": "model-Category",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "Site"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "id": "model-Site",
+                                  "text": ""
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [],
+                                          "cls": "android.widget.Button",
+                                          "text": "ExcludedApp"
+                                        }
+                                      ],
+                                      "cls": "android.view.View",
+                                      "text": ""
+                                    }
+                                  ],
+                                  "cls": "android.view.View",
+                                  "id": "model-ExcludedApp",
+                                  "text": ""
+                                }
+                              ],
+                              "cls": "android.view.View",
+                              "text": ""
+                            }
+                          ],
+                          "cls": "android.view.View",
+                          "text": ""
+                        },
+                        {
+                          "children": [],
+                          "cls": "android.view.View",
+                          "text": ""
+                        }
+                      ],
+                      "cls": "android.view.View",
+                      "text": ""
+                    }
+                  ],
+                  "cls": "android.view.View",
+                  "id": "swagger-ui",
+                  "text": ""
+                }
+              ],
+              "cls": "android.webkit.WebView",
+              "text": "Swagger UI"
+            }
+          ],
+          "cls": "android.webkit.WebView"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "cls": "android.widget.ImageView",
+              "desc": "العودة للخلف"
+            },
+            {
+              "children": [],
+              "cls": "android.widget.ImageView",
+              "desc": "تحويل"
+            },
+            {
+              "children": [],
+              "cls": "android.widget.ImageView",
+              "desc": "مزيد من الخيارات"
+            }
+          ],
+          "cls": "android.widget.FrameLayout"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "cls": "android.widget.ImageView",
+              "desc": "الرموز التعبيرية والملصقات والصور المتحركة"
+            },
+            {
+              "children": [],
+              "cls": "android.widget.EditText",
+              "text": "الرسالة"
+            },
+            {
+              "children": [],
+              "cls": "android.widget.ImageView",
+              "desc": "إرفاق وسائط"
+            },
+            {
+              "children": [],
+              "cls": "android.widget.FrameLayout",
+              "desc": "تسجيل رسالة صوتية"
+            }
+          ],
+          "cls": "android.widget.FrameLayout"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "cls": "android.widget.ImageView",
+              "desc": "العودة للخلف"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "cls": "android.view.View",
+                  "desc": "صورة الملف الشخصي"
+                },
+                {
+                  "children": [],
+                  "cls": "android.widget.TextView",
+                  "text": "الرسائل المحفوظة"
+                }
+              ],
+              "cls": "android.widget.FrameLayout",
+              "desc": "الرسائل المحفوظة\n"
+            },
+            {
+              "children": [],
+              "cls": "android.widget.ImageButton",
+              "desc": "بحث"
+            },
+            {
+              "children": [],
+              "cls": "android.widget.ImageButton",
+              "desc": "مزيد من الخيارات"
+            }
+          ],
+          "cls": "android.widget.FrameLayout"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "cls": "android.view.ViewGroup",
+              "text": "https://gist.github.com/Kyriakos-Georgiopoulos/347cad919bdc86c7865e29a61f6f1b59\nتم الإرسال ⁨في 10:42 ص⁩, تم قرائتها\n"
+            },
+            {
+              "children": [],
+              "cls": "android.view.ViewGroup",
+              "text": "7 مايو"
+            },
+            {
+              "children": [],
+              "cls": "android.view.ViewGroup",
+              "text": "Gemini in Android Studio can now search and crawl the live web.\n\n3 steps: enable MCP servers → paste Crawleo config → restart.\n\nYour IDE assistant just got real-time internet access. No plugins. No SDK. Just JSON.\n\nFull guide → crawleo.dev\nتم الإرسال ⁨في 6:10 م⁩, تم قرائتها\n"
+            },
+            {
+              "children": [],
+              "cls": "android.view.ViewGroup",
+              "text": "10 مايو"
+            },
+            {
+              "children": [],
+              "cls": "android.view.ViewGroup",
+              "text": "https://api.aynaa.org/api-docs/\nتم الإرسال ⁨في 9:25 ص⁩, تم قرائتها\n"
+            },
+            {
+              "children": [],
+              "cls": "android.view.ViewGroup",
+              "text": "15 مايو"
+            },
+            {
+              "children": [],
+              "cls": "android.view.ViewGroup",
+              "text": "، ملف ⁨TXT⁩log.txt, ٧١٩٫٣ KB\nتم الإرسال ⁨في 6:33 م⁩, تم قرائتها\n"
+            },
+            {
+              "children": [],
+              "cls": "android.view.ViewGroup",
+              "text": "، ملف ⁨TXT⁩log.txt, ٨٫٨ MB\nتم الإرسال ⁨في 6:44 م⁩, تم قرائتها\n"
+            },
+            {
+              "children": [],
+              "cls": "android.view.ViewGroup",
+              "text": "18 مايو"
+            },
+            {
+              "children": [],
+              "cls": "android.view.ViewGroup",
+              "text": "، ملف ⁨JSON⁩screenShot.json, ٢٤٫٧ KB\nتم الإرسال ⁨في 3:17 م⁩, تم قرائتها\n"
+            }
+          ],
+          "cls": "androidx.recyclerview.widget.RecyclerView"
+        }
+      ],
+      "cls": "android.widget.FrameLayout"
+    }
+  }
+}

@@ -26,7 +26,7 @@ fun BottomBar(
     modifier: Modifier = Modifier,
     androidVersion: String,
     appVersion: String,
-    home: () -> Unit,
+    onClick: () -> Unit,
 ) {
     Box(
         modifier.fillMaxWidth()
@@ -46,7 +46,7 @@ fun BottomBar(
             modifier = Modifier
                 .align(Alignment.Center)
                 .padding(8.dp)
-                .clickable { home() }
+                .clickable { onClick() }
                 .fillMaxWidth(.29f),//todo
         )
         Text(

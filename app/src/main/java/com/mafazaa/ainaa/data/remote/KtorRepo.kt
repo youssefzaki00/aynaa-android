@@ -2,12 +2,15 @@ package com.mafazaa.ainaa.data.remote
 
 import android.util.Log
 import com.mafazaa.ainaa.Constants
+import com.mafazaa.ainaa.data.local.SharedPrefs
 import com.mafazaa.ainaa.data.models.NetworkResult
 import com.mafazaa.ainaa.data.models.ReportModel
 import com.mafazaa.ainaa.data.models.VersionModel
 import com.mafazaa.ainaa.domain.repo.RemoteRepo
+import com.mafazaa.ainaa.utils.MyLog
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.android.Android
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logging
 import io.ktor.client.request.get
@@ -22,18 +25,35 @@ import io.ktor.http.Parameters
 import io.ktor.http.contentType
 import io.ktor.http.formUrlEncode
 import io.ktor.http.isSuccess
+import io.ktor.serialization.kotlinx.json.json
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.Json.Default.parseToJsonElement
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.longOrNull
 import kotlinx.serialization.json.booleanOrNull
+import kotlinx.serialization.json.buildJsonObject
+import kotlinx.serialization.json.put
 import java.io.File
 
 
-class KtorRepo : RemoteRepo {
+class KtorRepo(
+    private val sharedPrefs: SharedPrefs,
+    private val client: HttpClient = HttpClient(Android) {
+        install(Logging) {
+            level = LogLevel.BODY
+        }
+        install(ContentNegotiation) {
+            json(Json {
+                ignoreUnknownKeys = true
+                isLenient = true
+            })
+        }
+    }
+) : RemoteRepo {
 
     val reportProblemFormUrl =
         "https://docs.google.com/forms/d/e/1FAIpQLSdGddOCCrlfbCjmBhTyu38EczpW_CeBGWOqGwvaQmXv1kDNRA/formResponse"
@@ -99,17 +119,133 @@ class KtorRepo : RemoteRepo {
         }
     }
 
-    override suspend fun getAllBlockedWords(): List<String> ?{
+    override suspend fun authenticate(deviceId: String): String? {
+        return try {
+            var response: HttpResponse = client.post("${Constants.BASE_URL}auth/signup") {
+                contentType(ContentType.Application.Json)
+                setBody(buildJsonObject {
+                    put("deviceId", deviceId)
+                })
+            }
+
+            if (!response.status.isSuccess()) {
+                val errorJson = parseToJsonElement(response.bodyAsText()).jsonObject
+                val message = errorJson["message"]?.jsonPrimitive?.content
+                if (message == "User already exists") {
+                    MyLog.d("KtorRepo", "User already exists, attempting login")
+                    response = client.post("${Constants.BASE_URL}auth/user/login") {
+                        contentType(ContentType.Application.Json)
+                        setBody(buildJsonObject {
+                            put("deviceId", deviceId)
+                        })
+                    }
+                }
+            }
+
+            if (response.status.isSuccess()) {
+                val json = parseToJsonElement(response.bodyAsText()).jsonObject
+                val token = json["data"]?.jsonObject?.get("token")?.jsonPrimitive?.content
+                token
+            } else {
+                MyLog.e("KtorRepo", "Authentication failed: ${response.status}")
+                null
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+
+    override suspend fun getApps(lastSync: String?): List<String>? {
+        if (sharedPrefs.token.isEmpty()) {
+            val newToken = authenticate(sharedPrefs.deviceId.toString())
+            if (newToken != null) {
+                sharedPrefs.token = newToken
+            } else {
+                MyLog.e("KtorRepo", "Could not obtain token for apps")
+                return null
+            }
+        }
+
+        return try {
+            val response: HttpResponse = client.get("${Constants.BASE_URL}apps") {
+                header("accept", "application/json")
+                header("Authorization", "Bearer ${sharedPrefs.token}")
+                lastSync?.let {
+                    url.parameters.append("lastSync", it)
+                }
+            }
+            if (response.status.isSuccess()) {
+                val json = parseToJsonElement(response.bodyAsText()).jsonObject
+                val data = json["data"]?.jsonObject
+                val apps = data?.get("apps")?.jsonArray
+                val packageNames = apps?.map { appObj ->
+                    appObj.jsonObject["packageName"]?.jsonPrimitive?.content.orEmpty()
+                }
+                packageNames
+            } else {
+                Log.e("KtorRepo", "Failed to fetch apps: ${response.status}")
+                null
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+
+    override suspend fun getExcludedApps(): List<String>? {
+        if (sharedPrefs.token.isEmpty()) {
+            val newToken = authenticate(sharedPrefs.deviceId.toString())
+            if (newToken != null) {
+                sharedPrefs.token = newToken
+            } else {
+                Log.e("KtorRepo", "Could not obtain token for excluded apps")
+                return null
+            }
+        }
+
+        return try {
+            val response: HttpResponse = client.get("${Constants.BASE_URL}excluded-apps") {
+                header("accept", "application/json")
+                header("Authorization", "Bearer ${sharedPrefs.token}")
+            }
+            if (response.status.isSuccess()) {
+                val json = parseToJsonElement(response.bodyAsText()).jsonObject
+                val data = json["data"]?.jsonObject
+                val excludedApps = data?.get("excludedApps")?.jsonArray
+                excludedApps?.map { it.jsonObject["packageName"]?.jsonPrimitive?.content.orEmpty() }
+            } else {
+                Log.e("KtorRepo", "Failed to fetch excluded apps: ${response.status}")
+                null
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+
+    override suspend fun getAllBlockedWords(): List<String>? {
         val allWords = mutableListOf<String>()
         var page = 1
         var hasNextPage = true
+
+        if (sharedPrefs.token.isEmpty()) {
+            val newToken = authenticate(sharedPrefs.deviceId.toString())
+            if (newToken != null) {
+                sharedPrefs.token = newToken
+            } else {
+                Log.e("KtorRepo", "Could not obtain token")
+                return null
+            }
+        }
+
         try {
             while (hasNextPage) {
                 Log.d("KtorRepo", "Fetching page $page")
-                val url = "https://api.aynaa.org/api/v1/keywords?page=$page&limit=100"
+                val url = "${Constants.BASE_URL}keywords?page=$page&limit=100"
                 val response: HttpResponse = client.get(url) {
                     header("accept", "application/json")
-                    header("Authorization", "Bearer ${Constants.WORD_API_TOKEN}")
+                    header("Authorization", "Bearer ${sharedPrefs.token}")
                 }
                 if (response.status.isSuccess()) {
                     val json = parseToJsonElement(response.bodyAsText()).jsonObject
@@ -138,12 +274,6 @@ class KtorRepo : RemoteRepo {
         return allWords
     }
 
-    val client = HttpClient(Android) {
-        install(Logging) {
-            level = LogLevel.BODY
-        }
-    }
-
 
     override fun submitReportToGoogleForm(reportModel: ReportModel): Flow<NetworkResult> = flow {
         emit(NetworkResult.Loading)
@@ -167,13 +297,5 @@ class KtorRepo : RemoteRepo {
             emit(NetworkResult.Error(e.localizedMessage))
         }
 
-    }
-}
-
-//useful for quick testing
-suspend fun main() {
-    val repo = KtorRepo()
-    repo.submitReportToGoogleForm(ReportModel("f", "f", "f", "f")).collect {
-        println(it)
     }
 }

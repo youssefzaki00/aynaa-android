@@ -8,7 +8,7 @@ import com.mafazaa.ainaa.service.MyAccessibilityService
 import com.mafazaa.ainaa.utils.MyLog
 
 /**
- * Receiver to restart the accessibility service when needed (e.g., after being killed).
+ * todo check
  */
 class RestartReceiver: BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {

@@ -1,6 +1,7 @@
 package com.mafazaa.ainaa.data.local
 
 import android.content.SharedPreferences
+import kotlin.random.Random
 
 
 class SharedPrefs(sharedPreferences: SharedPreferences) {
@@ -26,6 +27,9 @@ class SharedPrefs(sharedPreferences: SharedPreferences) {
      * To check if the app was updated, compare this with the current version.
      */
     var lastVersion by sharedPreferences.delegates.int(0)
+    val deviceId by sharedPreferences.delegates.int(Random.nextInt(), key = "localId")
+    var token by sharedPreferences.delegates.string("")
+    var lastSyncAppsTime by sharedPreferences.delegates.string("")
 }
 
 /**

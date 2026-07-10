@@ -8,26 +8,35 @@ import java.io.File
 import java.io.FileOutputStream
 
 class JsEngineTest {
-    val engine = LuaScriptRepo().apply {
+    val engine = LuaRepo().apply {
         setCodes(
-            LuaScriptRepo.defaultScripts
+            LuaRepo.defaultScripts
         )
     }
     val gson = Gson()
-    val reportShouldBlock = File("js-engine-should-block-report.txt")
-    val reportShouldNotBlock = File("js-engine-should-not-block-report.txt")
+    val root = File("..\\resources-utils")
+    val reportDir = File(root, "report").apply { mkdirs() }
+    val reportShouldBlock = File(reportDir,"should-block-report.txt")
+    val reportShouldNotBlock = File(reportDir,"should-not-block-report.txt")
+    val reportBrowsers = File(reportDir,"browsers.txt")
 
     @Test
     fun `test codes should blocking`() {
-        val root = File("..\\uninstall-utils\\block")
+        val root = File("..\\resources-utils\\block")
         val manufacturers = root.list() ?: return
         val report = FileOutputStream(reportShouldBlock, false)
         for (m in manufacturers) {
             report.append("\n=== $m ===\n")
-            for (file in File(root, m).listFiles() ?: continue) {
+            loop@ for (file in File(root, m).listFiles() ?: continue) {
                 val rootJson = com.google.gson.JsonParser.parseString(file.readText()).asJsonObject
                 val screenJson = rootJson.getAsJsonObject("screenAnalysis")
                 val analysis = gson.fromJson(screenJson, ScreenAnalysis::class.java)
+                AntiDisableKotlinChecker.checkers.forEach { checker ->
+                    if (checker.check(analysis)) {
+                        report.append("already blocked ${file.name} of $m by ${checker.name}\n")
+                        continue@loop
+                    }
+                }
                 engine.evaluate(analysis).also { result ->
                     if (result is ScriptResult.Error) {
                         report.append("error blocking ${file.name} of $m : ${result.error}")
@@ -39,10 +48,23 @@ class JsEngineTest {
 
         }
     }
+    @Test
+    fun `get url from browsers`(){
+        val dir =File(root,"browser")
+        val files = dir.listFiles() ?: return
+        val report = FileOutputStream(reportBrowsers, false)
+        for (file in files) {
+            val rootJson = com.google.gson.JsonParser.parseString(file.readText()).asJsonObject
+            val screenJson = rootJson.getAsJsonObject("screenAnalysis")
+            val analysis = gson.fromJson(screenJson, ScreenAnalysis::class.java)
+            val url =getUrlFromBrowser(analysis)
+            report.append(file.name + " : " + url + "\n")
+        }
+    }
 
     @Test
     fun `test codes should not blocking`() {
-        val root = File("..\\uninstall-utils\\pass")
+        val root = File("..\\resources-utils\\pass")
         if (!root.exists()) return
 
         // gather all files under the pass folder (no manufacturers list)
@@ -57,20 +79,24 @@ class JsEngineTest {
                 val screenJson = rootJson.getAsJsonObject("screenAnalysis")
                 val analysis = gson.fromJson(screenJson, ScreenAnalysis::class.java)
                 val result = engine.evaluate(analysis)
-                when (result) {
-                    is ScriptResult.Error -> {
-                        builder.appendLine("error ${file.name}: ${result.error}")
-                        // fail the test for this file
-                    }
-
-                    is ScriptResult.Success -> {
-                        builder.appendLine("script=${result.scriptName} matched=${result.matched}")
-                        // ensure the script did NOT match (should not block)
+                AntiDisableKotlinChecker.checkers.forEach { checker ->
+                    if (checker.check(analysis)) {
+                        builder.appendLine("already blocked by ${checker.name}")
                     }
                 }
+                when (result) {
+                    is ScriptResult.Success -> {
+                        if (result.matched) {
+                            builder.appendLine("unexpectedly blocked by ${result.scriptName} ")
+                        }
+                    }
+                    is ScriptResult.Error -> builder.appendLine("error evaluating: ${result.error}")
+                }
+
             } catch (e: Exception) {
                 builder.appendLine("exception processing ${file.name}: ${e.message}")
             }
+            builder.appendLine()
         }
 
         // write report at once using StringBuilder

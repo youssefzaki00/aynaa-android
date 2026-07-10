@@ -36,7 +36,6 @@ class AppViewModel(
 
     private val TAG = "MainViewModel"
     private val _apps = MutableStateFlow<List<AppInfo>>(emptyList())
-    private val _blockedWords = MutableStateFlow<List<String>>(emptyList())
     val apps: StateFlow<List<AppInfo>> = _apps.asStateFlow()
     val blockedWords: StateFlow<List<String>> = contentRepo.blockedWordsStatus
 
@@ -109,8 +108,10 @@ class AppViewModel(
         sharedPrefs.dnsProtectionLevel = level
     }
 
-    fun loadBlockedWords() {
+    fun syncContent() {
         contentRepo.getBlockedWords()
+        contentRepo.getExcludedApps()
+        contentRepo.getRemoteBlockedApps()
     }
 
     fun addBlockedWord(word: String) {

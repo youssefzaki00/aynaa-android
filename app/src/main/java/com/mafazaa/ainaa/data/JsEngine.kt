@@ -6,7 +6,7 @@ import com.mafazaa.ainaa.BuildConfig
 import com.mafazaa.ainaa.domain.models.ScreenAnalysis
 import com.mafazaa.ainaa.domain.models.ScriptCode
 import com.mafazaa.ainaa.domain.models.ScriptResult
-import com.mafazaa.ainaa.domain.repo.ScriptRepo
+import com.mafazaa.ainaa.domain.repo.AntiDisableRepo
 import org.mozilla.javascript.Context
 import org.mozilla.javascript.ContextFactory
 import org.mozilla.javascript.Scriptable
@@ -19,12 +19,12 @@ import org.mozilla.javascript.Scriptable
  * @property useTimeout Whether to enforce a timeout/instruction limit on scripts.
  * @property instructionLimit The maximum number of JS instructions allowed per script.
  *
- * Implements [ScriptRepo] for script management and evaluation.
+ * Implements [AntiDisableRepo] for script management and evaluation.
  */
 class JsEngine(
     private val useTimeout: Boolean = true,
     private val instructionLimit: Int = 50_000 // only used when useTimeout==true
-) : ScriptRepo {
+) : AntiDisableRepo {
 
     private val codes = mutableListOf<ScriptCode>()
     private val gson = Gson()
@@ -51,8 +51,6 @@ class JsEngine(
             override fun observeInstructionCount(cx: Context?, instructionCount: Int) {
                 throw ScriptTimeoutException("JS script exceeded instruction limit ($instructionLimit)")
             }
-        }.also { factory ->
-            factory
         }
     } else null
 

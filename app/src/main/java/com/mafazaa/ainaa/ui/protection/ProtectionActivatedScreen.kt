@@ -29,6 +29,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.mafazaa.ainaa.BuildConfig
 import com.mafazaa.ainaa.R
 import com.mafazaa.ainaa.domain.models.UpdateState
 import com.mafazaa.ainaa.ui.common.ReportLink
@@ -112,21 +113,23 @@ fun ProtectionActivatedScreen(
             }
         }
 
-        Button(
-            onClick = { showKeywordsDialog = true },
-            colors = ButtonDefaults.buttonColors(
-                containerColor = red,
-                contentColor = Color.White
-            ),
-            shape = RoundedCornerShape(12.dp),
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(bottom = 16.dp)
-                .height(48.dp)
-        ) {
-            Text(text = "Show blocked keywords")
-        }
 
+        if (BuildConfig.DEBUG) {
+            Button(
+                onClick = { showKeywordsDialog = true },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = red,
+                    contentColor = Color.White
+                ),
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 16.dp)
+                    .height(48.dp)
+            ) {
+                Text(text = "Show blocked keywords")
+            }
+        }
         if (showKeywordsDialog) {
             ManageKeywordsDialog(
                 keywords = keywords,

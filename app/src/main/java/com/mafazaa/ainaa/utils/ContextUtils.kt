@@ -9,12 +9,14 @@ import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
+import android.content.ClipData
 import android.content.Context
 import android.content.Context.NOTIFICATION_SERVICE
 import android.content.Intent
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.os.Build
+import android.os.Environment
 import android.os.Process
 import android.provider.Settings
 import android.provider.Settings.canDrawOverlays
@@ -38,12 +40,10 @@ fun Context.installApk(apkFile: File) {
     val intent = Intent(Intent.ACTION_VIEW)
     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-    val apkUri =
-        FileProvider.getUriForFile(
-            this,
-            "${this.packageName}.provider",
-            apkFile
-        )
+    val apkUri = FileProvider.getUriForFile(
+        this, "${this.packageName}.provider", apkFile
+    )
+    intent.clipData = ClipData.newRawUri(null, apkUri)
     intent.setDataAndType(apkUri, "application/vnd.android.package-archive")
     try {
         this.startActivity(intent)
@@ -70,7 +70,6 @@ fun isServiceRunning(context: Context, serviceClass: Class<*>): Boolean {
 }
 
 
-
 fun Context.openUrl(url: String) {
     val intent = Intent(Intent.ACTION_VIEW, url.toUri())
     intent.addCategory(Intent.CATEGORY_BROWSABLE)
@@ -82,24 +81,20 @@ fun Context.hasUsageStatsPermission(): Boolean {
     val appOps = getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager
     val mode = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
         appOps.unsafeCheckOpNoThrow(
-            AppOpsManager.OPSTR_GET_USAGE_STATS,
-            Process.myUid(), packageName
+            AppOpsManager.OPSTR_GET_USAGE_STATS, Process.myUid(), packageName
         )
     } else {
         appOps.checkOpNoThrow(
-            AppOpsManager.OPSTR_GET_USAGE_STATS,
-            Process.myUid(), packageName
+            AppOpsManager.OPSTR_GET_USAGE_STATS, Process.myUid(), packageName
         )
     }
     return mode == AppOpsManager.MODE_ALLOWED
 }
 
 fun Context.hasNotificationPermission(): Boolean {
-    return Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU ||
-            ContextCompat.checkSelfPermission(
-                this,
-                POST_NOTIFICATIONS
-            ) == PackageManager.PERMISSION_GRANTED
+    return Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU || ContextCompat.checkSelfPermission(
+        this, POST_NOTIFICATIONS
+    ) == PackageManager.PERMISSION_GRANTED
 }
 
 
@@ -120,14 +115,11 @@ fun ComponentActivity.requestUsageStatsPermission() {
 }
 
 fun Context.hasAccessibilityPermission(): Boolean {
-    val am =
-        getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager
+    val am = getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager
     val enabledServices =
         am.getEnabledAccessibilityServiceList(AccessibilityServiceInfo.FEEDBACK_ALL_MASK)
     for (service in enabledServices) {
-        if (service.resolveInfo.serviceInfo.packageName == packageName &&
-            service.resolveInfo.serviceInfo.name == MyAccessibilityService::class.java.name
-        ) {
+        if (service.resolveInfo.serviceInfo.packageName == packageName && service.resolveInfo.serviceInfo.name == MyAccessibilityService::class.java.name) {
             return true
         }
     }
@@ -141,32 +133,63 @@ fun Context.requestAccessibilityPermission() {
 }
 
 fun Context.shareFile(logFile: File) {
-    val uri = FileProvider.getUriForFile(
-        this,
-        "${packageName}.provider",
-        logFile
-    )
+    try {
+        // Ensure source file exists and is readable
+        if (!logFile.exists() || !logFile.canRead()) {
+            MyLog.e("ShareFile", "Source file does not exist or is not readable: ${logFile.path}")
+            return
+        }
 
-    val shareIntent = Intent(Intent.ACTION_SEND).apply {
-        type = "text/plain"
-        putExtra(Intent.EXTRA_STREAM, uri)
-        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        // Save to external storage (writable location)
+        val externalStorageDir = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)
+        if (externalStorageDir == null) {
+            MyLog.e("ShareFile", "External files dir is null")
+            return
+        }
+        if (!externalStorageDir.exists()) {
+            externalStorageDir.mkdirs()
+        }
+
+        val external = File(externalStorageDir, logFile.name)
+
+        // Copy using streams to avoid reading whole file into memory and to handle IO issues gracefully
+        logFile.inputStream().use { input ->
+            external.outputStream().use { output ->
+                input.copyTo(output)
+            }
+        }
+
+        // Get URI for the saved external file
+        val uri = FileProvider.getUriForFile(
+            this, "${packageName}.provider", external
+        )
+
+        val shareIntent = Intent(Intent.ACTION_SEND).apply {
+            type = "text/plain"
+            putExtra(Intent.EXTRA_STREAM, uri)
+            clipData = ClipData.newRawUri(null, uri)
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        }
+
+        val chooserIntent = Intent.createChooser(shareIntent, "Share log file").apply {
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+
+        startActivity(chooserIntent)
+    } catch (e: Exception) {
+        MyLog.e("ShareFile", "Error sharing file", e)
     }
-
-    startActivity(Intent.createChooser(shareIntent, "Share log file").apply {
-        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    })
 }
+
 fun Context.hasAdminPermission(
     adminReceiver: android.content.ComponentName
-): Boolean {
-    val dpm = getSystemService(Context.DEVICE_POLICY_SERVICE) as android.app.admin.DevicePolicyManager
-    return dpm.isAdminActive(adminReceiver)
-}
+)= (getSystemService(Context.DEVICE_POLICY_SERVICE) as android.app.admin.DevicePolicyManager)
+        .isAdminActive(adminReceiver)
+
 
 fun Context.requestAdminPermission(
-    
+
     adminReceiver: android.content.ComponentName,
     requestAdmin: androidx.activity.result.ActivityResultLauncher<Intent>
 ) {
@@ -175,8 +198,10 @@ fun Context.requestAdminPermission(
     if (!isAdminActive) {
         val intent = Intent(android.app.admin.DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN)
         intent.putExtra(android.app.admin.DevicePolicyManager.EXTRA_DEVICE_ADMIN, adminReceiver)
-        intent.putExtra(android.app.admin.DevicePolicyManager.EXTRA_ADD_EXPLANATION,
-            getString(R.string.admin_permission_message))
+        intent.putExtra(
+            android.app.admin.DevicePolicyManager.EXTRA_ADD_EXPLANATION,
+            getString(R.string.admin_permission_message)
+        )
         requestAdmin.launch(intent)
     }
 }
@@ -187,7 +212,7 @@ fun Context.getAllApps(): List<AppInfo> {
     val packages = packageManager.getInstalledApplications(PackageManager.GET_META_DATA)
 
     for (applicationInfo in packages) {
-        if (applicationInfo.flags and ApplicationInfo.FLAG_SYSTEM == 0 && applicationInfo.packageName!= this.packageName) {
+        if (applicationInfo.flags and ApplicationInfo.FLAG_SYSTEM == 0 && applicationInfo.packageName != this.packageName) {
             val name = packageManager.getApplicationLabel(applicationInfo).toString()
             val icon = packageManager.getApplicationIcon(applicationInfo)
             apps.add(AppInfo(name, icon, applicationInfo.packageName))
@@ -198,8 +223,7 @@ fun Context.getAllApps(): List<AppInfo> {
 
 internal fun Context.createNotification(): Notification {
     val channel = NotificationChannel(
-        NOTIFICATION_CHANNEL_ID,
-        getString(R.string.app_name),// Channel name visible in settings
+        NOTIFICATION_CHANNEL_ID, getString(R.string.app_name),// Channel name visible in settings
         NotificationManager.IMPORTANCE_LOW // Low importance to be less intrusive
     ).apply {
         description = getString(R.string.app_notification_description)
@@ -209,8 +233,9 @@ internal fun Context.createNotification(): Notification {
 
     // Create an intent that opens your app when the notification is tapped
     val pendingIntent = Intent(this, AppActivity::class.java).let { notificationIntent ->
-        PendingIntent.getActivity(this, 0, notificationIntent,
-            PendingIntent.FLAG_IMMUTABLE)
+        PendingIntent.getActivity(
+            this, 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE
+        )
     }
 
     // Build the notification
@@ -219,8 +244,7 @@ internal fun Context.createNotification(): Notification {
         .setContentText(getString(R.string.protection_active_text))
         // add description
 
-        .setSmallIcon(R.drawable.ic_auto_protect)
-        .setContentIntent(pendingIntent)
+        .setSmallIcon(R.drawable.ic_auto_protect).setContentIntent(pendingIntent)
         .setOngoing(true) // Makes the notification non-dismissible
         .build()
 }

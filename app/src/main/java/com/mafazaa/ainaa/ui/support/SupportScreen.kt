@@ -136,7 +136,7 @@ fun SupportScreen(
             onOpenScreenShotWindow()
 
         }
-        if (BuildConfig.DEBUG) {
+        if (true) {//todo
             Spacer(modifier = Modifier.height(16.dp))
             val blockingText = if (isBlocking) {
                 stringResource(R.string.stop_blocking)
