@@ -50,9 +50,21 @@ fun EnableProtectionScreen(
         verticalArrangement = Arrangement.spacedBy(8.dp) // optional spacing between the two
     ) {
         var selectedLevel by remember { mutableStateOf(selectedLevel) }
-        ProtectionLevelSelector(selectedLevel, {
-            selectedLevel = it
-        })
+        Column(
+            modifier = Modifier.padding(16.dp),
+            horizontalAlignment = Alignment.Start
+        ) {
+        ProtectionCard(
+            title = stringResource(R.string.protection_high_lvl_text),
+
+            description = stringResource(R.string.protection_high_lvl_message),
+            examples = listOf(
+                stringResource(R.string.p_rn_label_text),
+                stringResource(R.string.gamble_label_text),
+            ),
+            selected = true,
+        ){}
+        }
         ProtectYourDevice({ enableProtection(selectedLevel) }, report)
     }
 

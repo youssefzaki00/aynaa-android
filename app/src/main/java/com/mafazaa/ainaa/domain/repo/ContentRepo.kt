@@ -10,9 +10,9 @@ interface ContentRepo {
     val blockedWordsStatus: StateFlow<List<String>>
     val excludedAppsStatus: StateFlow<List<String>>
     val remoteBlockedAppsStatus: StateFlow<List<String>>
-    fun getBlockedWords()
-    fun getExcludedApps()
-    fun getRemoteBlockedApps()
+    suspend   fun getBlockedWords()
+    suspend   fun getExcludedApps()
+    suspend  fun getRemoteBlockedApps()
     fun removeKeyWord(word: String)
     fun addKeyWord(word: String)
 }

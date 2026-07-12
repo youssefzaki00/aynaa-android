@@ -35,6 +35,7 @@ import kotlinx.coroutines.flow.last
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.koin.java.KoinJavaComponent.inject
+import java.util.Arrays
 import kotlin.system.measureTimeMillis
 import kotlin.time.measureTimedValue
 
@@ -105,13 +106,20 @@ class MyAccessibilityService : AccessibilityService() {
         const val ACTION_SHARE_CURRENT_SCREEN = "SHARE_CURRENT_SCREEN"
         internal const val NOTIFICATION_ID = 101 // Unique ID for the notification
         internal const val NOTIFICATION_CHANNEL_ID = "AINAA_PROTECTION_CHANNEL"
-        internal const val WATCHDOG_INTERVAL_MS = 15 * 60 * 1000L
 
         const val TAG = "MyAccessibilityService"
 
         private val SETTINGS_PACKAGE = DeviceUtils.settingsPackageName
         private val ACCESSIBILITY_SETTINGS =
             "${SETTINGS_PACKAGE}.accessibility.AccessibilitySettings"
+
+        private fun isLikelyKeyboardPackage(packageName: String): Boolean {
+            val keyboardPackageHints = listOf(
+                "inputmethod",
+                "keyboard"
+            )
+            return keyboardPackageHints.any { packageName.contains(it, ignoreCase = true) }
+        }
     }
 
     override fun onCreate() {
@@ -133,14 +141,11 @@ class MyAccessibilityService : AccessibilityService() {
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {
         // Return early if event is null or service is not running
         event ?: return
+        val currentPackageName = event.packageName ?: return
         if (isPaused.value || isStopped.value) return
-        if (event.packageName == packageName) return
+        if (currentPackageName == packageName) return
 
-        // Skip excluded apps
-        val excludedApps = contentRepo.excludedAppsStatus.value
-        if (event.packageName.toString() in excludedApps || event.packageName.contains("com.google.android.inputmethod")) {
-            return
-        }
+
 
         // Only handle window content changed events
         if (event.eventType != AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED && event.eventType != AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED) {
@@ -194,6 +199,11 @@ class MyAccessibilityService : AccessibilityService() {
                     }
                 }
                 Log.d(TAG, "Script evaluated in ${scriptEvalDuration.inWholeMilliseconds}ms")
+                // Skip excluded apps
+                val excludedApps = contentRepo.excludedAppsStatus.value
+                if (currentPackageName.toString() in excludedApps || isLikelyKeyboardPackage(currentPackageName.toString())) {
+                    return@launch
+                }
 
                 if (checkBlockedApp(currentPackage)) {
                     MyLog.i(TAG, "Blocked app in use: $currentPackage")
@@ -224,11 +234,12 @@ class MyAccessibilityService : AccessibilityService() {
 
 
     fun MyAccessibilityService.checkBlockedApp(currentApp: String?): Boolean {
-        if (!this.isKeyguardSecure())//this means the phone is locked and the local data is encrypted
-            return false
+//        if (!this.isKeyguardSecure()) todo
+//            return false
         if (currentApp == null) return false
+
         
-        return currentApp in sharedPrefs.blockedApps || 
+        return currentApp in sharedPrefs.blockedApps ||
                currentApp in contentRepo.remoteBlockedAppsStatus.value
     }
 
@@ -244,9 +255,6 @@ class MyAccessibilityService : AccessibilityService() {
                     val node = stack.removeAt(stack.size - 1)
 
                     val nodeText = node.text ?: ""
-                    if (nodeText.contains("mathgames66.github.io")) {
-                        Log.d(TAG, "Blocked domain found: $nodeText")
-                    }
                     if (nodeText.isNotBlank()) {
                         // Extract possible domains from the node text
                         val detectedDomain = findBlockedDomainInText(nodeText)

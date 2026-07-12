@@ -6,6 +6,8 @@ import com.mafazaa.ainaa.data.local.SharedPrefs
 import com.mafazaa.ainaa.data.models.NetworkResult
 import com.mafazaa.ainaa.data.models.ReportModel
 import com.mafazaa.ainaa.data.models.VersionModel
+import com.mafazaa.ainaa.domain.models.UninstallRequest
+import com.mafazaa.ainaa.domain.models.UninstallRequestStatus
 import com.mafazaa.ainaa.domain.repo.RemoteRepo
 import com.mafazaa.ainaa.utils.MyLog
 import io.ktor.client.HttpClient
@@ -15,6 +17,7 @@ import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logging
 import io.ktor.client.request.get
 import io.ktor.client.request.header
+import io.ktor.client.request.patch
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
 import io.ktor.client.statement.HttpResponse
@@ -178,7 +181,7 @@ class KtorRepo(
             if (response.status.isSuccess()) {
                 val json = parseToJsonElement(response.bodyAsText()).jsonObject
                 val data = json["data"]?.jsonObject
-                val apps = data?.get("apps")?.jsonArray
+                val apps = data?.get("items")?.jsonArray
                 val packageNames = apps?.map { appObj ->
                     appObj.jsonObject["packageName"]?.jsonPrimitive?.content.orEmpty()
                 }
@@ -212,12 +215,133 @@ class KtorRepo(
             if (response.status.isSuccess()) {
                 val json = parseToJsonElement(response.bodyAsText()).jsonObject
                 val data = json["data"]?.jsonObject
-                val excludedApps = data?.get("excludedApps")?.jsonArray
+                val excludedApps = data?.get("items")?.jsonArray
                 excludedApps?.map { it.jsonObject["packageName"]?.jsonPrimitive?.content.orEmpty() }
             } else {
                 Log.e("KtorRepo", "Failed to fetch excluded apps: ${response.status}")
                 null
             }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+
+    override suspend fun createUninstallRequest(reason: String): String? {
+        if (sharedPrefs.token.isEmpty()) {
+            val newToken = authenticate(sharedPrefs.deviceId.toString())
+            if (newToken != null) {
+                sharedPrefs.token = newToken
+            } else {
+                MyLog.e("KtorRepo", "Could not obtain token for uninstall request")
+                return null
+            }
+        }
+
+        return try {
+            val response: HttpResponse = client.post("${Constants.BASE_URL}requests") {
+                header("accept", "application/json")
+                header("Authorization", "Bearer ${sharedPrefs.token}")
+                contentType(ContentType.Application.Json)
+                setBody(buildJsonObject {
+                    put("reason", reason)
+                })
+            }
+            if (response.status.isSuccess()) {
+                val json = parseToJsonElement(response.bodyAsText()).jsonObject
+                val data = json["data"]?.jsonObject
+                val request = data?.get("request")?.jsonObject
+                request?.get("id")?.jsonPrimitive?.content
+            } else {
+                MyLog.e("KtorRepo", "Failed to create uninstall request: ${response.status}")
+                null
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+
+    override suspend fun updateUninstallRequest(id: String, reason: String): Boolean {
+        if (sharedPrefs.token.isEmpty()) {
+            val newToken = authenticate(sharedPrefs.deviceId.toString())
+            if (newToken != null) {
+                sharedPrefs.token = newToken
+            } else {
+                MyLog.e("KtorRepo", "Could not obtain token for update uninstall request")
+                return false
+            }
+        }
+
+        return try {
+            val response: HttpResponse = client.patch("${Constants.BASE_URL}requests/$id") {
+                header("accept", "application/json")
+                header("Authorization", "Bearer ${sharedPrefs.token}")
+                contentType(ContentType.Application.Json)
+                setBody(buildJsonObject {
+                    put("reason", reason)
+                })
+            }
+            response.status.isSuccess()
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        }
+    }
+
+    override suspend fun getUninstallRequests(): List<UninstallRequest>? {
+        if (sharedPrefs.token.isEmpty()) {
+            val newToken = authenticate(sharedPrefs.deviceId.toString())
+            if (newToken != null) {
+                sharedPrefs.token = newToken
+            } else {
+                MyLog.e("KtorRepo", "Could not obtain token for fetching uninstall requests")
+                return null
+            }
+        }
+
+        return try {
+            val allRequests = mutableListOf<UninstallRequest>()
+            var page = 1
+            var totalPages = 1
+
+            while (page <= totalPages) {
+                val response: HttpResponse = client.get("${Constants.BASE_URL}requests") {
+                    header("accept", "application/json")
+                    header("Authorization", "Bearer ${sharedPrefs.token}")
+                    url.parameters.append("page", page.toString())
+                    url.parameters.append("limit", "100")
+                }
+
+                if (!response.status.isSuccess()) {
+                    MyLog.e("KtorRepo", "Failed to fetch uninstall requests: ${response.status}")
+                    return null
+                }
+
+                val json = parseToJsonElement(response.bodyAsText()).jsonObject
+                val data = json["data"]?.jsonObject
+                val items = data?.get("items")?.jsonArray.orEmpty()
+
+                allRequests.addAll(items.map { item ->
+                    val obj = item.jsonObject
+                    UninstallRequest(
+                        reason = obj["reason"]?.jsonPrimitive?.content ?: "",
+                        id = obj["id"]?.jsonPrimitive?.content ?: "",
+                        status = when (obj["status"]?.jsonPrimitive?.content) {
+                            "APPROVED" -> UninstallRequestStatus.APPROVED
+                            "REJECTED" -> UninstallRequestStatus.REJECTED
+                            else -> UninstallRequestStatus.PENDING
+                        },
+                        timeCreated = obj["createdAt"]?.jsonPrimitive?.content ?: ""
+                    )
+                })
+
+                totalPages = data?.get("pagination")?.jsonObject
+                    ?.get("pages")?.jsonPrimitive?.content?.toIntOrNull() ?: page
+                page++
+            }
+
+            allRequests
         } catch (e: Exception) {
             e.printStackTrace()
             null
@@ -250,7 +374,7 @@ class KtorRepo(
                 if (response.status.isSuccess()) {
                     val json = parseToJsonElement(response.bodyAsText()).jsonObject
                     val data = json["data"]?.jsonObject
-                    val keywords = data?.get("keywords")?.jsonArray
+                    val keywords = data?.get("items")?.jsonArray
 
                     keywords?.forEach { element ->
                         element.jsonObject["word"]?.jsonPrimitive?.content?.let { word ->

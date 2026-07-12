@@ -53,6 +53,7 @@ import com.mafazaa.ainaa.data.models.NetworkResult
 import com.mafazaa.ainaa.domain.models.AppInfo
 import com.mafazaa.ainaa.domain.models.DnsProtectionLevel
 import com.mafazaa.ainaa.domain.models.PermissionState
+import com.mafazaa.ainaa.domain.models.UninstallRequestStatus
 import com.mafazaa.ainaa.domain.models.UpdateState
 import com.mafazaa.ainaa.helpers.LocaleHelper
 import com.mafazaa.ainaa.navigation.Screen
@@ -69,6 +70,8 @@ import com.mafazaa.ainaa.ui.dialog.HowItWorksDialog
 import com.mafazaa.ainaa.ui.dialog.ManageKeywordsDialog
 import com.mafazaa.ainaa.ui.dialog.PermissionDialog
 import com.mafazaa.ainaa.ui.dialog.ReportProblemDialog
+import com.mafazaa.ainaa.ui.dialog.UninstallDialogState
+import com.mafazaa.ainaa.ui.dialog.UninstallRequestDialog
 import com.mafazaa.ainaa.ui.protection.EnableProtectionScreen
 import com.mafazaa.ainaa.ui.protection.ProtectionActivatedScreen
 import com.mafazaa.ainaa.ui.support.SupportScreen
@@ -106,6 +109,7 @@ sealed interface DialogState {
     data object BlockWords : DialogState
     data class EnableProtectionConfirm(val level: DnsProtectionLevel) :
         DialogState
+    data object UninstallRequest : DialogState
 }
 
 
@@ -305,6 +309,22 @@ class AppActivity : ComponentActivity() {
                     onAddKeyword = { viewModel.addBlockedWord(it) },
                     onRemoveKeyword = { viewModel.removeBlockedWord(it) })
             }
+            
+            DialogState.UninstallRequest -> {
+                val state by viewModel.uninstallDialogState.collectAsState()
+                UninstallRequestDialog(
+                    state = state,
+                    onDismiss = { dialogState = null },
+                    onRefresh = { viewModel.fetchUninstallRequests() },
+                    onSubmitRequest = { reason ->
+                        viewModel.submitUninstallRequest(reason) {}
+                    },
+                    onStopProtectionPermanently = {
+                        startAccessibilityService(MyAccessibilityService.ACTION_STOP)
+                        dialogState = null
+                    }
+                )
+            }
 
             null -> {}
         }
@@ -370,6 +390,7 @@ class AppActivity : ComponentActivity() {
                                 onRemoveKeyword = { viewModel.removeBlockedWord(it) },
                                 keywords = viewModel.blockedWords.collectAsState().value.toSet(),
                                 onUpdateClick = { updateStatus ->
+                                    viewModel.syncContent()
                                     when (updateStatus) {
                                         UpdateState.Downloaded -> {
                                             context.installApk(viewModel.updateFile())
@@ -401,9 +422,11 @@ class AppActivity : ComponentActivity() {
                                 },
                                 onOpenScreenShotWindow = {
                                     viewModel.showScreenshotOverlay(true)
-
                                 },
-                                isBlocking =  !MyAccessibilityService.isPaused.collectAsState().value
+                                isBlocking =  !MyAccessibilityService.isPaused.collectAsState().value,
+                                onShowUninstallRequestDialog = {
+                                    dialogState = DialogState.UninstallRequest
+                                }
                             )
                         }
 

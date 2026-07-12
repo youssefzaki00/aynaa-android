@@ -147,4 +147,24 @@
     <string name="stop_blocking">stop blocking</string>
     <string name="start_blocking">continue blocking</string>
     <string name="blocked_site_detected_text">blocked site detected</string>
+
+    <!-- Uninstall Request -->
+    <string name="uninstall_request_card_title">📋 Request to Uninstall</string>
+    <string name="uninstall_request_card_message">Need to uninstall the app? Submit a request and our team will review it as soon as possible.</string>
+    <string name="uninstall_request_button_text">Submit Uninstall Request</string>
+    <string name="uninstall_request_dialog_title">Uninstall Request</string>
+    <string name="uninstall_request_tab_new">New Request</string>
+    <string name="uninstall_request_tab_list">My Requests</string>
+    <string name="uninstall_request_new_hint">Provide a clear reason for your uninstall request. Our team will review it promptly.</string>
+    <string name="uninstall_request_reason_label">Reason</string>
+    <string name="uninstall_request_reason_placeholder">Explain why you want to uninstall the app…</string>
+    <string name="uninstall_request_reason_error">Please provide at least 10 characters</string>
+    <string name="uninstall_request_send_button">Send Request</string>
+    <string name="uninstall_request_empty">No requests yet.\nSubmit your first request from the "New Request" tab.</string>
+    <string name="uninstall_status_approved">Approved</string>
+    <string name="uninstall_status_rejected">Rejected</string>
+    <string name="uninstall_status_pending">Pending</string>
+    <string name="refresh">Refresh</string>
+    <string name="request_sent_successfully">Request sent successfully</string>
+    <string name="stop_protection_permanently">Stop Protection Permanently</string>
 </resources>

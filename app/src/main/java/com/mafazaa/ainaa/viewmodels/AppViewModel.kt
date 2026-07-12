@@ -13,7 +13,9 @@ import com.mafazaa.ainaa.data.models.ReportModel
 import com.mafazaa.ainaa.domain.FileRepo
 import com.mafazaa.ainaa.domain.models.AppInfo
 import com.mafazaa.ainaa.domain.models.DnsProtectionLevel
+import com.mafazaa.ainaa.domain.models.UninstallRequestStatus
 import com.mafazaa.ainaa.domain.models.UpdateState
+import com.mafazaa.ainaa.ui.dialog.UninstallDialogState
 import com.mafazaa.ainaa.domain.repo.ContentRepo
 import com.mafazaa.ainaa.domain.repo.RemoteRepo
 import com.mafazaa.ainaa.domain.repo.UpdateRepo
@@ -22,6 +24,7 @@ import com.mafazaa.ainaa.utils.MyLog
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import java.io.File
 
@@ -34,12 +37,16 @@ class AppViewModel(
     private val contentRepo: ContentRepo
 ) : ViewModel() {
 
+
     private val TAG = "MainViewModel"
     private val _apps = MutableStateFlow<List<AppInfo>>(emptyList())
     val apps: StateFlow<List<AppInfo>> = _apps.asStateFlow()
     val blockedWords: StateFlow<List<String>> = contentRepo.blockedWordsStatus
 
     var updateState = mutableStateOf<UpdateState>(UpdateState.NoUpdate)
+    
+    private val _uninstallDialogState = MutableStateFlow(UninstallDialogState())
+    val uninstallDialogState: StateFlow<UninstallDialogState> = _uninstallDialogState.asStateFlow()
 
     fun loadInstalledApps(appList: List<AppInfo>) {
         val appList = appList.toMutableList()
@@ -109,9 +116,30 @@ class AppViewModel(
     }
 
     fun syncContent() {
-        contentRepo.getBlockedWords()
-        contentRepo.getExcludedApps()
-        contentRepo.getRemoteBlockedApps()
+        viewModelScope.launch {
+            contentRepo.getBlockedWords()
+            contentRepo.getExcludedApps()
+            contentRepo.getRemoteBlockedApps()
+            fetchUninstallRequests()
+        }
+    }
+
+    fun fetchUninstallRequests() {
+        viewModelScope.launch {
+            _uninstallDialogState.update { it.copy(isLoading = true) }
+            val requests = remoteRepo.getUninstallRequests()
+            if (requests != null) {
+                _uninstallDialogState.update { 
+                    it.copy(
+                        requests = requests, 
+                        isLoading = false,
+                    ) 
+                }
+            } else {
+                _uninstallDialogState.update { it.copy(isLoading = false) }
+            }
+            Log.d(TAG, "requests \n$requests")
+        }
     }
 
     fun addBlockedWord(word: String) {
@@ -121,6 +149,43 @@ class AppViewModel(
 
     fun removeBlockedWord(word: String) {
         contentRepo.removeKeyWord(word)
+    }
+
+    fun submitUninstallRequest(reason: String, onResult: (Boolean) -> Unit) {
+        viewModelScope.launch {
+            _uninstallDialogState.update { it.copy(isLoading = true, isRequestSent = false) }
+
+            val requests = remoteRepo.getUninstallRequests()
+            val pendingRequest = requests?.find { it.status == UninstallRequestStatus.PENDING }
+
+            val success = if (pendingRequest != null) {
+                val updated = remoteRepo.updateUninstallRequest(pendingRequest.id, reason)
+                if (updated) {
+                    MyLog.d(TAG, "Updated uninstall request id: ${pendingRequest.id}")
+                }
+                updated
+            } else {
+                val newId = remoteRepo.createUninstallRequest(reason)
+                if (newId != null) {
+                    MyLog.d(TAG, "New uninstall request id: $newId")
+                    true
+                } else false
+            }
+
+            _uninstallDialogState.update { it.copy(isLoading = false, isRequestSent = success) }
+
+            if (success) {
+                val updatedRequests = remoteRepo.getUninstallRequests()
+                if (updatedRequests != null) {
+                    _uninstallDialogState.update { 
+                        it.copy(
+                            requests = updatedRequests,
+                        ) 
+                    }
+                }
+            }
+            onResult(success)
+        }
     }
 
 

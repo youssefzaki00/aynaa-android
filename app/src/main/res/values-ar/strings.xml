@@ -145,4 +145,24 @@
     <string name="stop_blocking">إيقاف الحجب</string>
     <string name="start_blocking">استئناف الحجب</string>
     <string name="blocked_site_detected_text">blocked site detected</string>
+    <string name="refresh">تحديث</string>
+
+    <!-- Uninstall Request -->
+    <string name="uninstall_request_card_title">📋 طلب إلغاء التثبيت</string>
+    <string name="uninstall_request_card_message">هل تحتاج إلى إلغاء تثبيت التطبيق؟ أرسل طلباً وسيقوم فريقنا بمراجعته في أقرب وقت ممكن.</string>
+    <string name="uninstall_request_button_text">إرسال طلب إلغاء تثبيت</string>
+    <string name="uninstall_request_dialog_title">طلب إلغاء التثبيت</string>
+    <string name="uninstall_request_tab_new">طلب جديد</string>
+    <string name="uninstall_request_tab_list">طلباتي</string>
+    <string name="uninstall_request_new_hint">يرجى تقديم سبب واضح لطلب إلغاء التثبيت. سيقوم فريقنا بمراجعته فوراً.</string>
+    <string name="uninstall_request_reason_label">السبب</string>
+    <string name="uninstall_request_reason_placeholder">اشرح لماذا تريد إلغاء تثبيت التطبيق…</string>
+    <string name="uninstall_request_reason_error">يرجى تقديم 10 أحرف على الأقل</string>
+    <string name="uninstall_request_send_button">إرسال الطلب</string>
+    <string name="uninstall_request_empty">لا توجد طلبات بعد.\nأرسل طلبك الأول من تبويب "طلب جديد".</string>
+    <string name="uninstall_status_approved">تمت الموافقة</string>
+    <string name="uninstall_status_rejected">تم الرفض</string>
+    <string name="uninstall_status_pending">قيد الانتظار</string>
+    <string name="request_sent_successfully">تم إرسال الطلب بنجاح</string>
+    <string name="stop_protection_permanently">إيقاف الحماية نهائياً</string>
 </resources>

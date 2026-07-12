@@ -25,7 +25,7 @@ import org.koin.dsl.module
 
 val appModule = module {
 
-    single<RemoteRepo> { if (BuildConfig.DEBUG) FakeRemoteRepo(get()) else KtorRepo(get()) }
+    single<RemoteRepo> {KtorRepo(get()) }
     single<SharedPrefs> { SharedPrefs(androidContext().getSharedPreferences("App", MODE_PRIVATE)) }
     single<FileRepo> { RealFileRepo(androidContext()) }
     single<LockOverlayManager> { LockOverlayManager(androidContext()) }

@@ -98,19 +98,19 @@ fun ProtectionActivatedScreen(
                 Text(text = stringResource(R.string.support_us))
             }
 
-            Button(
-                onClick = onBlockAppClick,
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = red,
-                    contentColor = Color.White
-                ),
-                shape = RoundedCornerShape(12.dp),
-                modifier = Modifier
-                    .weight(1f)
-                    .height(48.dp)
-            ) {
-                Text(text = stringResource(R.string.block_app_text))
-            }
+//            Button( todo
+//                onClick = onBlockAppClick,
+//                colors = ButtonDefaults.buttonColors(
+//                    containerColor = red,
+//                    contentColor = Color.White
+//                ),
+//                shape = RoundedCornerShape(12.dp),
+//                modifier = Modifier
+//                    .weight(1f)
+//                    .height(48.dp)
+//            ) {
+//                Text(text = stringResource(R.string.block_app_text))
+//            }
         }
 
 

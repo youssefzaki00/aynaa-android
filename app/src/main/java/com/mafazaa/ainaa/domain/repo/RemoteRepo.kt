@@ -3,6 +3,7 @@ package com.mafazaa.ainaa.domain.repo
 import com.mafazaa.ainaa.data.models.NetworkResult
 import com.mafazaa.ainaa.data.models.ReportModel
 import com.mafazaa.ainaa.data.models.VersionModel
+import com.mafazaa.ainaa.domain.models.UninstallRequest
 import kotlinx.coroutines.flow.Flow
 import java.io.File
 
@@ -21,4 +22,10 @@ interface RemoteRepo {
     suspend fun getExcludedApps(): List<String>?
 
     suspend fun getApps(lastSync: String? =null): List<String>?
+
+    suspend fun createUninstallRequest(reason: String): String?
+
+    suspend fun updateUninstallRequest(id: String, reason: String): Boolean
+
+    suspend fun getUninstallRequests(): List<UninstallRequest>?
 }
