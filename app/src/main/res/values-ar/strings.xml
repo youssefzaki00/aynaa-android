@@ -165,4 +165,14 @@
     <string name="uninstall_status_pending">قيد الانتظار</string>
     <string name="request_sent_successfully">تم إرسال الطلب بنجاح</string>
     <string name="stop_protection_permanently">إيقاف الحماية نهائياً</string>
+    <string name="i_agree_to_the">أنا أوافق على </string>
+    <string name="terms_of_service">شروط الخدمة</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="protection_description">تحجب المحتوى الإباحي ومواقع القمار والتطبيقات الضارة. على الراوتر تُطبَّق الحماية على كل الأجهزة المتصلة بالشبكة. على الهاتف والكمبيوتر تُفعَّل عبر تطبيق عينا سلسبيلا.</string>
+    <string name="feature_porn">الإباحية والمحتوى غير المناسب</string>
+    <string name="feature_gambling">القمار والمراهنات</string>
+    <string name="feature_apps">التطبيقات الضارة</string>
+    <string name="feature_network">المواقع والتطبيقات على الشبكة بالكامل</string>
+    <string name="protection_title">الحماية</string>
+    <string name="activate_protection_button">فعّل الحماية</string>
 </resources>

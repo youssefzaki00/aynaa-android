@@ -32,7 +32,6 @@ import androidx.compose.ui.unit.sp
 import com.mafazaa.ainaa.BuildConfig
 import com.mafazaa.ainaa.R
 import com.mafazaa.ainaa.domain.models.UpdateState
-import com.mafazaa.ainaa.ui.common.ReportLink
 import com.mafazaa.ainaa.ui.common.TwoColorText
 import com.mafazaa.ainaa.ui.dialog.ManageKeywordsDialog
 import com.mafazaa.ainaa.ui.theme.red
@@ -139,7 +138,6 @@ fun ProtectionActivatedScreen(
             )
         }
 
-        ReportLink(onReportClick = onReportClick)
         Spacer(modifier = Modifier.height(16.dp))
         val (black, red) = when (updateState) {
             UpdateState.NoUpdate -> Pair(

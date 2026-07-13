@@ -167,4 +167,14 @@
     <string name="refresh">Refresh</string>
     <string name="request_sent_successfully">Request sent successfully</string>
     <string name="stop_protection_permanently">Stop Protection Permanently</string>
+    <string name="i_agree_to_the">I agree to the </string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="protection_description">Blocks pornography, gambling sites, and harmful apps. On the router, protection is applied to all devices connected to the network. On phone and computer, it is activated via the Ainaa Salsabila app.</string>
+    <string name="feature_porn">Pornography and inappropriate content</string>
+    <string name="feature_gambling">Gambling and betting</string>
+    <string name="feature_apps">Harmful apps</string>
+    <string name="feature_network">Websites and apps across the entire network</string>
+    <string name="protection_title">Protection</string>
+    <string name="activate_protection_button">Activate Protection</string>
 </resources>
